@@ -2,6 +2,7 @@
     box-sizing: border-box;
 }
 
+
 :root {
     --socialbg:#2c2c2c;
     --socialbody:#130f0f;
@@ -15,10 +16,8 @@ body{
     margin: 0 auto;
     padding: 0;
     width: 95%;
+    font-family: 'Poppins', sans-serif;
 }
-
-
-
 
 header{
     display: flex;
@@ -28,27 +27,23 @@ header{
 nav ul {
     display: flex;
     list-style: none;
-    margin-top: 2rem;
+    margin-top:2rem;
 }
 
-nav li {
-    align-self: stretch;
-}
 
 nav a {
-    font-size: 1.5rem;
-    font-weight: 800;
+    font-size: 1.2rem;
+    font-weight: 600;
     text-transform: uppercase;
     text-decoration-line: none;
-    padding:1rem;
+    padding: 1.2rem;
     color: black;
+    letter-spacing: .2rem;
+
 }
 
 nav a.active{ 
-     border: 2px solid rgb(177, 173, 173);
-     margin-left: 1rem;
-     padding: 1rem;
-     border-radius: .6rem;
+     border-bottom: 2px solid rgb(202, 214, 33);
 }
 
 .socials ul {
