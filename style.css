@@ -1,0 +1,74 @@
+*{
+    box-sizing: border-box;
+}
+
+:root {
+    --socialbg:#2c2c2c;
+    --socialbody:#130f0f;
+}
+
+html{
+    font-size: 10px;
+}
+
+body{
+    margin: 0 auto;
+    padding: 0;
+    width: 95%;
+}
+
+
+
+
+header{
+    display: flex;
+    justify-content: space-between;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin-top: 2rem;
+}
+
+nav li {
+    align-self: stretch;
+}
+
+nav a {
+    font-size: 1.5rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    text-decoration-line: none;
+    padding:1rem;
+    color: black;
+}
+
+nav a.active{ 
+     border: 2px solid rgb(177, 173, 173);
+     margin-left: 1rem;
+     padding: 1rem;
+     border-radius: .6rem;
+}
+
+.socials ul {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+}
+
+.social-icon{
+    width: 3rem;
+    padding: .4rem;
+    margin-left:.7rem;
+    align-self: center;
+    border-radius: .9rem;
+    box-shadow: inset 3px 3px 3px 1px #3d3d3d;
+    background-image: linear-gradient(45deg, var(--socialbg), var(--socialbody) );
+
+}
+
+.social-icon--bg {fill: none;}
+.social-icon--logo{ fill: rgb(255, 255, 200);}
+.social-icon--logo:hover { fill: rgb(255, 255, 255);}
+
