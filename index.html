@@ -72,34 +72,33 @@
             </ul>
         </div> 
     </header>
-
-    <div class="slider">
-        <button class="slider-button slide-right">
-            <img src="img/right-arrow.svg" alt="">
+    
+    <div class="carousel">
+        <button class="carousel__button carousel__button--left">
+            <img src="/img/left-arrow.svg" alt="">
         </button>
-        <div class="slider-container">
-            <ul class="slide-container">
-                <li class="slide">
-                  <img class="slider-image" src="/img/slide1.jpg" alt="">
-                </li> 
-                <li class="slide">
-                  <img class="slider-image" src="img/slide2.jpg" alt="">
-                </li> 
-                <li class="slide">
-                  <img class="slider-image" src="img/slide 3.jpg" alt="">
+        <div class="carousel_track-container">
+            <ul class="carousel__track">
+                <li class="carousel__slide current-slide">
+                   <img class="carousel__image"  src="/img/slide1.jpg" alt="">
+                </li>
+                <li class="carousel__slide">
+                   <img class="carousel__image" src="/img/slide2.jpg" alt="">
+                </li>
+                <li class="carousel__slide">
+                    <img class="carousel__image" src="/img/slide 3.jpg" alt="">
                 </li>
             </ul>
         </div>
-        <button class="slider-button slide-left">
-            <img src="img/left-arrow.svg" alt="">
+        <button class="carousel__button carousel__button--right">
+            <img src="/img/right-arrow.svg" alt="">
         </button>
-        <div class="slider-nav">
-            <button class="slider-indi slider-indi-current"></button>
-            <button class="slider-indi"></button>
-            <button class="slider-indi"></button>
+        <div class="carousel__nav">
+            <button class="carousel__indicator current-slide"></button>
+            <button class="carousel__indicator"></button>
+            <button class="carousel__indicator"></button>
         </div>
     </div>
-
 <script src="/script.js"></script>
 
 </body>
