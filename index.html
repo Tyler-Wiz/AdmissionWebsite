@@ -72,34 +72,41 @@
             </ul>
         </div> 
     </header>
-    
-    <div class="carousel">
-        <button class="carousel__button carousel__button--left">
-            <img src="/img/left-arrow.svg" alt="">
-        </button>
-        <div class="carousel_track-container">
-            <ul class="carousel__track">
-                <li class="carousel__slide current-slide">
-                   <img class="carousel__image"  src="/img/slide1.jpg" alt="">
-                </li>
-                <li class="carousel__slide">
-                   <img class="carousel__image" src="/img/slide2.jpg" alt="">
-                </li>
-                <li class="carousel__slide">
-                    <img class="carousel__image" src="/img/slide 3.jpg" alt="">
-                </li>
-            </ul>
-        </div>
-        <button class="carousel__button carousel__button--right">
-            <img src="/img/right-arrow.svg" alt="">
-        </button>
-        <div class="carousel__nav">
-            <button class="carousel__indicator current-slide"></button>
-            <button class="carousel__indicator"></button>
-            <button class="carousel__indicator"></button>
-        </div>
-    </div>
-<script src="/script.js"></script>
+
+    <main>
+        <section class="slider">
+            <div>
+                <ul class="carousel">
+                    <li class="carousel__item carousel__item--visible">
+                        <div class="carousel__text-container">
+                            <h1 class="carousel__text">We provide guidance with choosing universities, courses and assist with finding scholarships.</h1>
+                        </div>
+                        <img src="img/slide1.jpg" />
+                    </li>
+                    <li class="carousel__item">
+                        <div class="carousel__text-container">
+                            <h1 class="carousel__text">We offer bespoke consultations, visas and immigration advisory services to help you fulfil your international study aspirations.</h1>
+                        </div>
+                        <img src="img/slide2.jpg" />
+                    </li>
+                    <li class="carousel__item">
+                        <div class="carousel__text-container">
+                            <h1 class="carousel__text">We can also help you create profiles that will catch the attention of your intended institutions.</h1>
+                        </div>
+                        <img src="img/slide 3.jpg" />
+                    </li>
+                </ul> 
+            </div>
+            <div class="dots-container">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </section>
+    </main>
+
+
+    <script src="/script.js"></script>
 
 </body>
 </html>

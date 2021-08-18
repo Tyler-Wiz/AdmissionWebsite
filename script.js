@@ -1,15 +1,10 @@
 const navbar = document.querySelector('.navbar')
-const track = document.querySelector('.carousel__track')
+const track = document.querySelector('.carousel')
 const slides = Array.from(track.children)
-const nextButton = document.querySelector('.carousel__button--right')
-const prevButton = document.querySelector('.carousel__button--left')
-const dotsNav = document.querySelector('.carousel__nav')
-const dots = Array.from(dotsNav.children)
-
-console.log(slides[2])
-
-
-const slideWidth = slides[0].getBoundingClientRect().width
+const dotnav = document.querySelector('.dots-container')
+const dots = document.getElementsByClassName('dot');
+const totalSlides = slides.length;
+let slidePosition = 0;
 
 navbar.addEventListener('click', function(nav){
     let elems = document.querySelectorAll(".active");
@@ -19,65 +14,38 @@ navbar.addEventListener('click', function(nav){
    nav.target.className = "active";
 }) 
 
-
-
-const setSlidePosition = (slide, index) => {
-    slide.style.left = slideWidth * index + 'px'
+const updateSlidePosition = () => {
+  slides.forEach(slide => {
+    slide.classList.remove('carousel__item--visible');
+    slide.classList.add('carousel__item--hidden');
+  })
+  let trackSlide =  slides[slidePosition]
+  trackSlide.classList.add('carousel__item--visible');
 }
 
-slides.forEach(setSlidePosition)
+setInterval(() => {
+    if (slidePosition === totalSlides - 1) {
+      slidePosition = 0;
+    } else {
+      slidePosition++;
+    }
+    updateSlidePosition();
+}, 7000);
 
-   
-const moveSlide = (track, currentSlide, focusSlide) => {
-    track.style.transform = 'translateX(-' + focusSlide.style.left + ')'
-    currentSlide.classList.remove('current-slide')
-    focusSlide.classList.add('current-slide')
+Array.from(dots).forEach(function(element, index) {
+  element.setAttribute('data-index', index);
+  element.setAttribute('aria-label', 'Go to slide #' + (index + 1));
+  element.addEventListener('click', updateSlideOnDotClick);
+});
 
+function updateSlideOnDotClick(){
+  slidePosition = parseInt(this.getAttribute('data-index'));
+  updateSlidePosition();
+  for (i = 0; i < dots.length; i++) {
+    dots[i].classList.add('active');
+  }
 }
 
-prevButton.addEventListener('click', e => {
-    const currentSlide = track.querySelector('.current-slide')
-    const prevSlide = currentSlide.previousElementSibling
-
-    moveSlide(track, currentSlide, prevSlide)
-})
-
-
-nextButton.addEventListener('click', e => {
-    const currentSlide = track.querySelector('.current-slide')
-    const nextSlide = currentSlide.nextElementSibling
-
-    moveSlide(track, currentSlide, nextSlide)
-    
-})
-
-const nextSliderTime = setInterval(() => {
-    const currentSlide = track.querySelector('.current-slide')
-    const nextSlide = currentSlide.nextElementSibling
-
-    moveSlide(track, currentSlide, nextSlide)
-   
-}, 4000);
-
-
-
-const prevSliderTime = setInterval(() => {
-        const currentSlide = track.querySelector('.current-slide')
-    const prevSlide = currentSlide.previousElementSibling
-
-    moveSlide(track, currentSlide, prevSlide)
-    }, 10000);
-
-    
-    
-function stopNext(){
-    clearInterval(nextSliderTime)
+for (i = 0; i < dots.length; i++) {
+  dots[i].classList.remove('active');
 }
-
-function stopPrev() {
-    clearInterval(prevSliderTime)
-}
-
-setTimeout(stopNext, 9000)
-setTimeout(stopPrev, 18000);
-
