@@ -18,7 +18,13 @@
 html{
     font-size: 10px;
 }
+h2 {
+  font-size: 1.8rem;
+}
 
+p{
+  font-size: 1.3rem;
+}
 body{
     margin: 0 auto;
     padding: 0;
@@ -124,7 +130,7 @@ nav a.active{
 
   .dots-container {
     position: absolute;
-    bottom: 25%;
+    bottom: 30%;
     left: 50%;
     transform: translateX(-50%);
   }
@@ -279,11 +285,12 @@ nav a.active{
   max-width: 80%;
   margin: 5rem auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 2.5rem;
 }
 
 .aboutus__container {
-  max-width: 350px;
+  max-width: 380px;
   height: 300px;
   border-radius: 10px;
   margin: 1rem;
@@ -293,18 +300,20 @@ nav a.active{
 }
 
 .aboutus__container:hover{
-  background-color: rgb(202, 214, 33);
+  background-color: var(--buttons);
   color: white;
   cursor: pointer;
   animation: slide-top 1000ms ;
 }
 
 .aboutus__container:hover .aboutus__arrow{
-  background-color:var(--buttons);
-  color: white;
-  cursor: pointer;
   display: block;
 }
+
+.aboutus__container:hover .aboutus__img--mod{
+  fill: white
+}
+
 .aboutus__arrow {
   width: 30px;
   position: absolute;
@@ -317,11 +326,22 @@ nav a.active{
 .aboutus__info{
   font-size: 1.5rem;
   margin: 0 auto;
-  width: 250px;
+  width: 240px;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   left: 10%;
+}
+
+.aboutus__img {
+  width: 5rem;
+  position: absolute;
+  top: 5%;
+  left: 10%;
+}
+
+.aboutus__img--mod {
+  fill: rgb(182, 194, 12);
 }
 
 
@@ -332,8 +352,8 @@ nav a.active{
             transform: translateY(0);
   }
   100% {
-    -webkit-transform: translateY(-50px);
-            transform: translateY(-50px);
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
   }
 }
 @keyframes slide-top {
@@ -342,8 +362,8 @@ nav a.active{
             transform: translateY(0);
   }
   100% {
-    -webkit-transform: translateY(-50px);
-            transform: translateY(-50px);
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
   }
 }
 
