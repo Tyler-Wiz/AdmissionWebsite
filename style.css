@@ -10,9 +10,9 @@
     --socialbody:#1a1515;
     --buttons:#cad621;
     --sectiontwo:#f6f6f642;
-    --links:#0a2342;
+    --links:#d1d1d1;
     --linkslight:#227c9d;
-    --gradient-box-w: linear-gradient(145deg, #e2e8ec, #ffffff)
+    --gradient-box-w: linear-gradient(145deg, #d1d1d1, #ffffff)
 }
 
 html{
@@ -282,12 +282,12 @@ nav a.active{
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
-.aboutus__container{
+.aboutus__container {
   max-width: 350px;
   height: 300px;
   border-radius: 10px;
   margin: 1rem;
-  box-shadow: rgba(212, 212, 250, 0.25) 0px 30px 60px -12px inset, #f1f1f1 0px 18px 36px -18px inset;
+  box-shadow: rgba(145, 145, 145, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
   background-color: var(--gradient-box-w);
   position: relative;
 }
@@ -296,10 +296,11 @@ nav a.active{
   background-color: rgb(202, 214, 33);
   color: white;
   cursor: pointer;
+  animation: slide-top 1000ms ;
 }
 
 .aboutus__container:hover .aboutus__arrow{
-  background-color: rgb(202, 214, 33);
+  background-color:var(--buttons);
   color: white;
   cursor: pointer;
   display: block;
@@ -314,7 +315,7 @@ nav a.active{
 }
 
 .aboutus__info{
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   margin: 0 auto;
   width: 250px;
   position: absolute;
@@ -323,4 +324,26 @@ nav a.active{
   left: 10%;
 }
 
+
+
+ @-webkit-keyframes slide-top {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+  }
+}
+@keyframes slide-top {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+  }
+}
 
