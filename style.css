@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;1,100;1,400;1,900&display=swap');
+
 *{
     box-sizing: border-box;
 }
@@ -6,6 +8,11 @@
 :root {
     --socialbg:#0A2342;
     --socialbody:#1a1515;
+    --buttons:#cad621;
+    --sectiontwo:#f6f6f642;
+    --links:#0a2342;
+    --linkslight:#227c9d;
+    --gradient-box-w: linear-gradient(145deg, #e2e8ec, #ffffff)
 }
 
 html{
@@ -21,8 +28,8 @@ body{
 
 header{
     display: flex;
-    justify-content: space-evenly;
-    width: 80%;
+    justify-content: space-between;
+    width: 90%;
     margin: 2rem auto;
 }
 
@@ -30,10 +37,15 @@ header{
     margin-right: 5rem;
 }
 
+.navbar--social{
+  display: flex;
+  justify-content: space-between;
+}
+
 nav ul {
     display: flex;
-    list-style: none;
-    margin-top:2rem;
+    list-style: none; 
+    align-self: center;
 }
 nav a {
     font-size: 1.2rem;
@@ -52,14 +64,17 @@ nav a.active{
 .socials ul {
     display: flex;
     list-style: none;
-    margin-top:1.2rem;
+    margin-top: 2.5rem;
+}
+
+.socials li {
+  margin: -1rem;
+  padding: 0;
 }
 
 .social-icon{
     width: 3rem;
     padding: .4rem;
-    margin-left:.7rem;
-    align-self: center;
     border-radius: .9rem;
     box-shadow: inset 3px 3px 3px 1px #3d3d3d;
     background-image: linear-gradient(45deg, var(--socialbg), var(--socialbody) );
@@ -71,7 +86,7 @@ nav a.active{
 .social-icon--logo:hover { fill: rgb(255, 255, 255);}
 
 
-/* Slider Area */
+/* Slider Section */
 .carousel {
     overflow: hidden;
     width:100%;
@@ -178,6 +193,52 @@ nav a.active{
       z-index: 9999;
   }
 
+  .carousel__button {
+    background: var(--buttons);
+    border: none;
+    margin-left: 4rem;
+    color: rgb(0, 0, 0);
+    padding: 12px 20px ;
+    border-radius: 6px;
+    font-weight: 900;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+    animation: slide-in-elliptic-right-fwd  2000ms;
+  }
+
+ @-webkit-keyframes slide-in-elliptic-right-fwd {
+  0% {
+    -webkit-transform: translateX(800px) rotateY(-30deg) scale(0);
+            transform: translateX(800px) rotateY(-30deg) scale(0);
+    -webkit-transform-origin: -100% 50%;
+            transform-origin: -100% 50%;
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0) rotateY(0) scale(1);
+            transform: translateX(0) rotateY(0) scale(1);
+    -webkit-transform-origin: -1800px 50%;
+            transform-origin: -1800px 50%;
+    opacity: 1;
+  }
+}
+@keyframes slide-in-elliptic-right-fwd {
+  0% {
+    -webkit-transform: translateX(800px) rotateY(-30deg) scale(0);
+            transform: translateX(800px) rotateY(-30deg) scale(0);
+    -webkit-transform-origin: -100% 50%;
+            transform-origin: -100% 50%;
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0) rotateY(0) scale(1);
+            transform: translateX(0) rotateY(0) scale(1);
+    -webkit-transform-origin: -1800px 50%;
+            transform-origin: -1800px 50%;
+    opacity: 1;
+  }
+}
+
  @-webkit-keyframes scale-in-right {
   0% {
     -webkit-transform: scale(0);
@@ -210,3 +271,56 @@ nav a.active{
     opacity: 1;
   }
 }
+
+/* About Us Section */
+
+.aboutus{
+  width:1028px;
+  max-width: 80%;
+  margin: 5rem auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.aboutus__container{
+  max-width: 350px;
+  height: 300px;
+  border-radius: 10px;
+  margin: 1rem;
+  box-shadow: rgba(212, 212, 250, 0.25) 0px 30px 60px -12px inset, #f1f1f1 0px 18px 36px -18px inset;
+  background-color: var(--gradient-box-w);
+  position: relative;
+}
+
+.aboutus__container:hover{
+  background-color: rgb(202, 214, 33);
+  color: white;
+  cursor: pointer;
+}
+
+.aboutus__container:hover .aboutus__arrow{
+  background-color: rgb(202, 214, 33);
+  color: white;
+  cursor: pointer;
+  display: block;
+}
+.aboutus__arrow {
+  width: 30px;
+  position: absolute;
+  top: 80%;
+  left: 10%;
+  cursor: pointer;
+  display: none;
+}
+
+.aboutus__info{
+  font-size: 1.8rem;
+  margin: 0 auto;
+  width: 250px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 10%;
+}
+
+

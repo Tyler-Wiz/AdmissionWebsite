@@ -30,7 +30,7 @@ setInterval(() => {
       slidePosition++;
     }
     updateSlidePosition();
-}, 7000);
+}, 5000);
 
 Array.from(dots).forEach(function(element, index) {
   element.setAttribute('data-index', index);
