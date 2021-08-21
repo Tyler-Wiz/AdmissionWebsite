@@ -5,6 +5,12 @@ const dotnav = document.querySelector('.dots-container')
 const dots = document.getElementsByClassName('dot');
 const totalSlides = slides.length;
 let slidePosition = 0;
+let count = 0
+let countTwo = 0
+let countThree = 0
+const clientNumbersOne = document.querySelector('#client__numbers--one')
+const clientNumbersTwo = document.querySelector('#client__numbers--two')
+const clientNumbersThree = document.querySelector('#client__numbers--three')
 
 navbar.addEventListener('click', function(nav){
     let elems = document.querySelectorAll(".active");
@@ -49,3 +55,30 @@ function updateSlideOnDotClick(){
 for (i = 0; i < dots.length; i++) {
   dots[i].classList.remove('active');
 }
+
+
+  let counting = setInterval(() => {
+      count++
+      clientNumbersOne.textContent = count + "K" + "+"
+      if(count === 13){
+        clearInterval(counting)
+      }
+  }, 200);
+
+
+  let countingTwo = setInterval(() => {
+      countTwo++
+      clientNumbersTwo.textContent = countTwo + "K" + "+"
+      if(countTwo === 50){
+        clearInterval(countingTwo)
+      }
+  }, 100);
+
+
+  let countingThree = setInterval(() => {
+      countThree++
+      clientNumbersThree.textContent = countThree + "K" + "+"
+      if(countThree === 10){
+        clearInterval(countingThree)
+      }
+  }, 200);
