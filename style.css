@@ -15,7 +15,7 @@
     --socialbody:#1a1515;
     --buttons:#cad621;
     --sectiontwo:#dfdfdf42;
-    --links:#d1d1d1;
+    --links:#f0f0f0;
     --linkslight:#227c9d;
     --gradient-box-w: linear-gradient(145deg, #d1d1d1, #ffffff)
 }
@@ -69,7 +69,10 @@ button {
 
 
 
-header{
+
+/* header Section */
+
+header {
     display: flex;
     justify-content: space-between;
     width: 90%;
@@ -139,7 +142,8 @@ nav a.active{
 .carousel {
     overflow: hidden;
     width:100%;
-    margin: 1rem auto;
+    margin: 0 auto;
+    margin-bottom: 2rem;
     position: relative;
     list-style: none;
     padding: 0;
@@ -226,8 +230,9 @@ nav a.active{
 
 
 .aboutus{
-  max-width:1100px;
-  margin: 5rem auto;
+  max-width:1200px;
+  margin: 0 auto;
+  margin-bottom: 5rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-gap: 2rem;
@@ -286,23 +291,29 @@ nav a.active{
 }
 
 
+
+
 /* clients */
-
-
 .clients {
-  margin: 4rem auto;
-  height: 50vh;
-  width: 50%;
+  width: 90%;
+  max-width:1200px;
 }
 
-.client__numbers {
-  font-size: 30px;
+.clients__info{
+   padding: 0;
 }
 
-.clients__worked {
-  display: flex;
-  justify-content: space-between;
+
+.clients__area {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  grid-gap: 1rem;
 }
+
+.clients__img img {
+    width:100%;
+}
+
 
 
 
