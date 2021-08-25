@@ -25,23 +25,28 @@
 =============== */
 
 
-body{
+body {
   margin: 0 auto;
   padding: 0;
   width: 100%;
   font-family: 'Poppins', sans-serif;
   letter-spacing: .15rem;
+  line-height: 1.8;
 }
 
 html{
   font-size: 10px;
 }
 
+h1 {
+  font-size: 3.5rem;
+  margin: 0;
+}
+
 h2 {
   font-size: 1.8rem;
 }
-
-nav a, 
+ 
 p {
   font-size: 1.3rem;
 }
@@ -50,6 +55,7 @@ nav a {
   font-weight: 600;
   text-transform: uppercase;
   text-decoration-line: none;
+  font-size: 1.4rem;
 }
 
 .carousel__text{
@@ -61,26 +67,25 @@ button {
   font-family: 'Montserrat', sans-serif;
 }
 
-
+.logo {
+  margin-right: 5rem;
+}
 
 /* =============
      Layout
 =============== */
 
 
-
-
 /* header Section */
 
 header {
     display: flex;
-    justify-content: space-between;
-    width: 90%;
-    margin: 2rem auto;
-}
-
-.logo {
-    margin-right: 5rem;
+    justify-content: space-around;
+    width: 100%;
+    margin: 0 auto;
+    padding: 1rem;
+    position: fixed;
+    z-index: 10;
 }
 
 .navbar--social{
@@ -88,14 +93,20 @@ header {
   justify-content: space-between;
 }
 
+.navbarBg {
+   background-color: #000000ea; 
+   animation: slide-in-top 150ms;
+}
+
 nav ul {
     display: flex;
     list-style: none; 
     align-self: center;
 }
+
 nav a {
-    padding: 1.2rem;
-    color: black;
+  padding: 1.2rem;
+  color: rgb(255, 255, 255);
 }
 
 nav a.active{ 
@@ -117,8 +128,8 @@ nav a.active{
     width: 3rem;
     padding: .4rem;
     border-radius: .9rem;
-    box-shadow: inset 3px 3px 3px 1px #3d3d3d;
-    background-image: linear-gradient(45deg, var(--socialbg), var(--socialbody) );
+    /* box-shadow: inset 3px 3px 3px 1px #3d3d3d;
+    background-image: linear-gradient(45deg, var(--socialbg), var(--socialbody) ); */
 
 }
 
@@ -156,9 +167,9 @@ nav a.active{
   
   .carousel .carousel__item img {
     width: 100%;
-    height: 65vh;
+    height:75vh;
     object-fit: cover;
-    filter: brightness(50%)
+    filter: brightness(40%)
   }
   
   .carousel .carousel__item--visible {
@@ -232,7 +243,7 @@ nav a.active{
 .aboutus{
   max-width:1200px;
   margin: 0 auto;
-  margin-bottom: 5rem;
+  margin-bottom: 10rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-gap: 2rem;
@@ -294,32 +305,69 @@ nav a.active{
 
 
 /* clients */
+
+
 .clients {
   width: 90%;
   max-width:1200px;
+  margin: 0 auto;
+  margin-bottom: 3rem;
 }
 
-.clients__info{
-   padding: 0;
+.clients__featured{
+  position: relative;
 }
-
 
 .clients__area {
   display: grid;
-  grid-template-columns: 3fr 2fr;
-  grid-gap: 1rem;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2rem;
 }
 
-.clients__img img {
-    width:100%;
+.featured__img {
+    width:95%;
+    height: 600px;
+    object-fit: cover;
 }
 
+.featured__back{
+  width:50%;
+  height: 550px;
+  position: absolute;
+  left: -3%;
+  top: 5%;
+  z-index: -10;
+}
 
+.clients__info span{
+  font-size: 3rem;
+  margin-right: 3rem;
+}
 
+.counter{
+  margin-top: 5rem;
+}
 
+.counter h2{
+  text-transform: capitalize;
+}
+
+.counterOne{
+  color: rgb(211, 224, 22);
+}
+
+.counterTwo{
+  color: rgb(63, 165, 42);
+}
+
+.counterThree{
+  color: rgb(165, 42, 69);
+}
 /* =============== 
     Animations
 ================ */
+
+
 
 @-webkit-keyframes slide-top {
   0% {
@@ -433,6 +481,32 @@ nav a.active{
     opacity: 1;
   }
 }
+
+ @-webkit-keyframes slide-in-top {
+  0% {
+    -webkit-transform: translateY(-1000px);
+            transform: translateY(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-top {
+  0% {
+    -webkit-transform: translateY(-1000px);
+            transform: translateY(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 
 
 /* ==============

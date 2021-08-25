@@ -8,9 +8,10 @@ let slidePosition = 0;
 let count = 0
 let countTwo = 0
 let countThree = 0
-const clientNumbersOne = document.querySelector('#client__numbers--one')
-const clientNumbersTwo = document.querySelector('#client__numbers--two')
-const clientNumbersThree = document.querySelector('#client__numbers--three')
+const clientNumbersOne = document.querySelector('.counterOne')
+const clientNumbersTwo = document.querySelector('.counterTwo')
+const clientNumbersThree = document.querySelector('.counterThree')
+
 
 navbar.addEventListener('click', function(nav){
     let elems = document.querySelectorAll(".active");
@@ -56,29 +57,43 @@ for (i = 0; i < dots.length; i++) {
   dots[i].classList.remove('active');
 }
 
-
-  let counting = setInterval(() => {
+    let counting = setInterval(() => {
       count++
-      clientNumbersOne.textContent = count + "K" + "+"
-      if(count === 13){
+      clientNumbersOne.textContent = count  + "+"
+      if(count === 550){
         clearInterval(counting)
       }
-  }, 200);
+    }, 10);
+ 
 
 
-  let countingTwo = setInterval(() => {
-      countTwo++
-      clientNumbersTwo.textContent = countTwo + "K" + "+"
-      if(countTwo === 50){
-        clearInterval(countingTwo)
-      }
-  }, 100);
+let countingTwo = setInterval(() => {
+  countTwo++
+  clientNumbersTwo.textContent = countTwo  + "+"
+  if(countTwo === 1900){
+    clearInterval(countingTwo)
+  }
+}, 3);
 
 
-  let countingThree = setInterval(() => {
-      countThree++
-      clientNumbersThree.textContent = countThree + "K" + "+"
-      if(countThree === 10){
-        clearInterval(countingThree)
-      }
-  }, 200);
+let countingThree = setInterval(() => {
+  countThree++
+  clientNumbersThree.textContent = countThree + "+"
+  if(countThree === 380){
+    clearInterval(countingThree)
+  }
+}, 10);
+
+
+  function changeNavBg(){
+    let scrollValue = window.scrollY;
+    const navbarBg = document.querySelector('#navbarBg')
+    
+    if(scrollValue < 520){
+        navbarBg.classList.remove('navbarBg')
+    } else {
+      navbarBg.classList.add('navbarBg')
+    }
+  }
+
+window.addEventListener('scroll', changeNavBg)
