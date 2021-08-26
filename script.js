@@ -57,15 +57,16 @@ for (i = 0; i < dots.length; i++) {
   dots[i].classList.remove('active');
 }
 
-    let counting = setInterval(() => {
-      count++
-      clientNumbersOne.textContent = count  + "+"
-      if(count === 550){
-        clearInterval(counting)
-      }
-    }, 10);
  
+function counting(){
+    count++
+    clientNumbersOne.textContent = count  + "+"
+    if(count === 550){
+    clearInterval(countId)
+}
+}
 
+let countId = setInterval(counting, 10)
 
 let countingTwo = setInterval(() => {
   countTwo++
@@ -89,11 +90,14 @@ let countingThree = setInterval(() => {
     let scrollValue = window.scrollY;
     const navbarBg = document.querySelector('#navbarBg')
     
-    if(scrollValue < 520){
+    if(scrollValue < 420){
         navbarBg.classList.remove('navbarBg')
     } else {
       navbarBg.classList.add('navbarBg')
     }
   }
 
+
+
 window.addEventListener('scroll', changeNavBg)
+

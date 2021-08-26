@@ -59,7 +59,7 @@ nav a {
 }
 
 .carousel__text{
-  font-size: 3.5rem;
+  font-size: 3rem;
 }
 
 button {
@@ -95,7 +95,7 @@ header {
 
 .navbarBg {
    background-color: #000000ea; 
-   animation: slide-in-top 150ms;
+   animation: slide-in-top 750ms;
 }
 
 nav ul {
@@ -154,7 +154,7 @@ nav a.active{
     overflow: hidden;
     width:100%;
     margin: 0 auto;
-    margin-bottom: 2rem;
+    margin-bottom: 7rem;
     position: relative;
     list-style: none;
     padding: 0;
@@ -217,9 +217,9 @@ nav a.active{
   
   .carousel__text-container {
       position: absolute;
-      top: 40%;
+      top: 50%;
       transform: translateY(-50%);
-      max-width: 40%;
+      max-width: 50%;
       margin-left: 10rem;
       z-index: 9999;
   }
@@ -227,6 +227,7 @@ nav a.active{
   .carousel__button {
     background: var(--buttons);
     border: none;
+    margin-top: 3rem;
     margin-left: 4rem;
     color: rgb(0, 0, 0);
     padding: 12px 20px ;
@@ -312,6 +313,7 @@ nav a.active{
   max-width:1200px;
   margin: 0 auto;
   margin-bottom: 3rem;
+  line-height: 2;
 }
 
 .clients__featured{
