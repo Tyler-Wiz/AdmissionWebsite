@@ -12,6 +12,9 @@
     <title>Admission</title>
 </head>
 <body>
+
+<!-- header section -->
+
     <header id="navbarBg">
         <div class="logo">
             <img src="img/logo.png" alt="">
@@ -70,10 +73,12 @@
                 </ul>
             </div> 
         </nav>
-        
     </header>
 
+<!-- Main section -->
+
     <main>
+        <!-- Carousel section -->
         <section class="slider">
             <div>
                 <ul class="carousel">
@@ -169,6 +174,43 @@
                   </div>  
              </div>
          </section>
+         
+         <section class="contact__us">
+            <div class="contact__form">
+                <form class="form" action="/" method="POST">
+                    <div>
+                      <div class="form__item">
+                        <label for="givennames" class="form__label">Name</label>
+                        <input type="text" class="form__input" name="givennvames" id="givennames" placeholder="Your Name here" required>
+                      </div>
+                      <div class="form__item">
+                        <label for="phoneNumber" class="form__label">Phone</label>
+                        <input type="number" class="form__input" name="phoneNumber" id="phoneNumber" placeholder="Your Phone Number" required>
+                      </div>
+                    </div>
+                    <div class="form__item">
+                        <label for="Email" class="form__label">Email Address</label>
+                        <input type="email" class="form__input" name="email" id="Email" placeholder="Please Enter Email Address" required>
+                    </div>
+                    <div class="form__item">
+                        <label for="subject" class="form__label">Subject</label>
+                        <input type="text" class="form__input" name="subject" id="subject" placeholder="Subject" required>
+                    </div>
+                    <div class="form__item">
+                      <label for="message" class="form__label">Message</label>
+                      <textarea maxlength="500" class="form__input" name="message" id="message" placeholder="Please enter your message here. (Max. 500 chars)" required></textarea>
+                    </div>
+                    <div class="form__item">
+                      <button class="form__btn" type="submit">Consult With Me</button>
+                    </div>
+                </form>
+            </div>
+
+         </section>
+
+         <footer>
+             <h3>Copyright &copy 2021</h3>
+         </footer>
     </main>
 
 </body>

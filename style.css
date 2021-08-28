@@ -7,6 +7,8 @@
 
 *{
     box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 
 
@@ -128,9 +130,6 @@ nav a.active{
     width: 3rem;
     padding: .4rem;
     border-radius: .9rem;
-    /* box-shadow: inset 3px 3px 3px 1px #3d3d3d;
-    background-image: linear-gradient(45deg, var(--socialbg), var(--socialbody) ); */
-
 }
 
 .social-icon--bg {
@@ -365,10 +364,98 @@ nav a.active{
 .counterThree{
   color: rgb(165, 42, 69);
 }
+
+
+
+/* contact us */
+
+.contact__us{
+  margin: 0 auto;
+  width: 80%;
+}
+
+.contact__info{
+  border: 3px solid red;
+}
+
+.form__item {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__item > * {
+  align-self: flex-start;
+}
+
+.form__label {
+  font-weight: 400;
+  padding: 10px 0;
+}
+
+.form__input {
+  -webkit-appearance: none;
+  width: 100%;
+  max-width: 450px;
+  /* Fix for Safari/iOS date fields */
+  min-height: calc(0.9em + (0.8em * 2) + 0.6em);
+  padding: 0.8em;
+  font-size: 1.5rem;
+  outline: none;
+  border: 1px solid #D7C1D7;
+  border-radius: 4px;
+  background: #f9f9f9;
+  transition: background 0.25s, border-color 0.25s, color 0.25s;
+}
+
+.form__input:focus {
+  background: #ffffff;
+}
+
+.form__input::placeholder {
+  color: #bbbbbb;
+}
+
+.form__input--small {
+  max-width: 250px;
+}
+
+textarea.form__input {
+  resize: none;
+  min-height: 150px;
+}
+
+.form__btn {
+  width: 100%;
+  max-width: 450px;
+  font-weight: 600;
+  font-size: 2rem;
+  margin: 10px 0;
+  padding: 10px;
+  color: #ffffff;
+  background: #520052;
+  border: 2px solid #520052;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+  text-align: center;
+}
+
+
+/* footer  */
+
+footer{
+  background-color: #000000;
+  height: 15vh;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
 /* =============== 
     Animations
 ================ */
-
 
 
 @-webkit-keyframes slide-top {
@@ -520,4 +607,17 @@ nav a.active{
     height: 40px;
     width: 40px;
   }
+}
+
+@media (max-width:700px){
+  .clients__area {
+    display: flex;
+    flex-direction: column;
+  }
+   
+  .featured__img {
+    width:100%;
+  }
+
+
 }

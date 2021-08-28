@@ -1,25 +1,46 @@
+
+let slidePosition = 0;
+let count = 0
+let countTwo = 0
+let countThree = 0
 const navbar = document.querySelector('.navbar')
 const track = document.querySelector('.carousel')
 const slides = Array.from(track.children)
 const dotnav = document.querySelector('.dots-container')
 const dots = document.getElementsByClassName('dot');
 const totalSlides = slides.length;
-let slidePosition = 0;
-let count = 0
-let countTwo = 0
-let countThree = 0
-const clientNumbersOne = document.querySelector('.counterOne')
-const clientNumbersTwo = document.querySelector('.counterTwo')
-const clientNumbersThree = document.querySelector('.counterThree')
+const studentHold = document.querySelector('.counterOne')
+const consultHold = document.querySelector('.counterTwo')
+const visaHold = document.querySelector('.counterThree')
 
+
+// Navbar Style Change // 
 
 navbar.addEventListener('click', function(nav){
-    let elems = document.querySelectorAll(".active");
-    [].forEach.call(elems, function(el) {
-      el.classList.remove("active");
-    });
-   nav.target.className = "active";
+  let elems = document.querySelectorAll(".active");
+  [].forEach.call(elems, function(el) {
+    el.classList.remove("active");
+  });
+ nav.target.className = "active";
 }) 
+
+
+function changeNavBg(){
+  let scrollValue = window.scrollY;
+  const navbarBg = document.querySelector('#navbarBg')
+  
+  if(scrollValue < 500){
+      navbarBg.classList.remove('navbarBg')
+  } else {
+    navbarBg.classList.add('navbarBg')
+  }
+}
+
+window.addEventListener('scroll', changeNavBg)
+
+
+// Carousel functions //
+
 
 const updateSlidePosition = () => {
   slides.forEach(slide => {
@@ -31,7 +52,7 @@ const updateSlidePosition = () => {
 }
 
 setInterval(() => {
-    if (slidePosition === totalSlides - 1) {
+  if (slidePosition === totalSlides - 1) {
       slidePosition = 0;
     } else {
       slidePosition++;
@@ -57,47 +78,35 @@ for (i = 0; i < dots.length; i++) {
   dots[i].classList.remove('active');
 }
 
+
+// Functions for Client Numbers // 
+
  
-function counting(){
+function student(){
     count++
-    clientNumbersOne.textContent = count  + "+"
+    studentHold.textContent = count  + "+"
     if(count === 550){
-    clearInterval(countId)
-}
+    clearInterval(studentId)
+  }
 }
 
-let countId = setInterval(counting, 10)
-
-let countingTwo = setInterval(() => {
+function consult(){
   countTwo++
-  clientNumbersTwo.textContent = countTwo  + "+"
+  consultHold.textContent = countTwo  + "+"
   if(countTwo === 1900){
-    clearInterval(countingTwo)
+    clearInterval(consultId)
   }
-}, 3);
+}
 
-
-let countingThree = setInterval(() => {
+function visa(){
   countThree++
-  clientNumbersThree.textContent = countThree + "+"
+  visaHold.textContent = countThree + "+"
   if(countThree === 380){
-    clearInterval(countingThree)
+    clearInterval(visaId)
   }
-}, 10);
+}
 
 
-  function changeNavBg(){
-    let scrollValue = window.scrollY;
-    const navbarBg = document.querySelector('#navbarBg')
-    
-    if(scrollValue < 420){
-        navbarBg.classList.remove('navbarBg')
-    } else {
-      navbarBg.classList.add('navbarBg')
-    }
-  }
-
-
-
-window.addEventListener('scroll', changeNavBg)
-
+let studentId = setInterval(student, 10)
+let consultId = setInterval(consult, 5)
+let visaId = setInterval(visa, 10)
