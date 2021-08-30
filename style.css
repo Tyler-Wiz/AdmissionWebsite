@@ -311,7 +311,7 @@ nav a.active{
   width: 90%;
   max-width:1200px;
   margin: 0 auto;
-  margin-bottom: 3rem;
+  margin-bottom: 10rem;
   line-height: 2;
 }
 
@@ -366,78 +366,40 @@ nav a.active{
 }
 
 
+/* Testimonial Area */
 
-/* contact us */
-
-.contact__us{
+.testimonials {
+  width: 100%;
   margin: 0 auto;
-  width: 80%;
 }
 
-.contact__info{
-  border: 3px solid red;
+.test{
+  background-color: #EFF1F4;
+  padding: 3rem;
+  margin-bottom: 10rem;
 }
 
-.form__item {
-  display: flex;
-  flex-direction: column;
-}
-
-.form__item > * {
-  align-self: flex-start;
-}
-
-.form__label {
-  font-weight: 400;
-  padding: 10px 0;
-}
-
-.form__input {
-  -webkit-appearance: none;
-  width: 100%;
-  max-width: 450px;
-  /* Fix for Safari/iOS date fields */
-  min-height: calc(0.9em + (0.8em * 2) + 0.6em);
-  padding: 0.8em;
-  font-size: 1.5rem;
-  outline: none;
-  border: 1px solid #D7C1D7;
-  border-radius: 4px;
-  background: #f9f9f9;
-  transition: background 0.25s, border-color 0.25s, color 0.25s;
-}
-
-.form__input:focus {
-  background: #ffffff;
-}
-
-.form__input::placeholder {
-  color: #bbbbbb;
-}
-
-.form__input--small {
-  max-width: 250px;
-}
-
-textarea.form__input {
-  resize: none;
-  min-height: 150px;
-}
-
-.form__btn {
-  width: 100%;
-  max-width: 450px;
-  font-weight: 600;
-  font-size: 2rem;
-  margin: 10px 0;
-  padding: 10px;
-  color: #ffffff;
-  background: #520052;
-  border: 2px solid #520052;
-  border-radius: 5px;
-  cursor: pointer;
-  outline: none;
+.test h1{
   text-align: center;
+  font-size: 4.5rem;
+  margin-bottom: 4rem;
+}
+
+.testimonial_cont{
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  justify-content:end;
+}
+
+
+
+.testimonial__imageArea {
+  text-align: center;
+}
+
+.testimonial__imageArea img{
+   width: 20rem;
+   border-radius: 50%;
 }
 
 
@@ -445,7 +407,7 @@ textarea.form__input {
 
 footer{
   background-color: #000000;
-  height: 15vh;
+  height: 10vh;
   color: white;
   display: flex;
   justify-content: center;

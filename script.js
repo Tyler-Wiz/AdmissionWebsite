@@ -3,6 +3,7 @@ let slidePosition = 0;
 let count = 0
 let countTwo = 0
 let countThree = 0
+let scrollValue = window.scrollY;
 const navbar = document.querySelector('.navbar')
 const track = document.querySelector('.carousel')
 const slides = Array.from(track.children)
@@ -28,7 +29,6 @@ navbar.addEventListener('click', function(nav){
 function changeNavBg(){
   let scrollValue = window.scrollY;
   const navbarBg = document.querySelector('#navbarBg')
-  
   if(scrollValue < 500){
       navbarBg.classList.remove('navbarBg')
   } else {
@@ -106,7 +106,7 @@ function visa(){
   }
 }
 
-
 let studentId = setInterval(student, 10)
 let consultId = setInterval(consult, 5)
 let visaId = setInterval(visa, 10)
+
