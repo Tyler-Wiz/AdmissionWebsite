@@ -11,8 +11,14 @@
     margin: 0;
 }
 
-
 :root {
+    --main:#2b6777;
+    --lightMain:#c8d8e4;
+    --linkDark:#52AB98;
+    --lightBackground:#ffffff;
+    --Breaker:#f2f2f2;
+    --mainTextColor:#000000;
+    --hamburgerMenuBg:#fcfcfc;
     --socialbg:#0A2342;
     --socialbody:#1a1515;
     --buttons:#cad621;
@@ -80,74 +86,180 @@ button {
 
 /* header Section */
 
-header {
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-    margin: 0 auto;
-    padding: 1rem;
-    position: fixed;
-    z-index: 10;
+
+/* =============
+   Hamburger Menu
+=============== */
+
+
+/* 
+Mobile Navigation 
+*/
+
+.mobile_nav {
+  text-align: left;
+  background:white;
+  position: relative;
+  width: 100%;
+  padding: .5rem;
+  z-index: 99999;
 }
 
-.navbar--social{
+.mobile_list {
+  position:absolute;
+  text-align: left;
+  margin-left: 1rem;
+  top: 100%;
+  right: 0; 
+  opacity: 1;
+  background:var(--hamburgerMenuBg);
+  width: 100%;
+  transform: scale(1, 0);
+  transform-origin: top;
+  transition: transform 400ms ease-in-out;
+}
+
+.mobile_list ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  margin-top: 1rem;
+  margin-left: 2rem;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
 }
 
-.navbarBg {
-   background-color: #000000ea; 
-   animation: slide-in-top 750ms;
+.mobile_list li {
+  padding: 1rem;
 }
 
-nav ul {
-    display: flex;
-    list-style: none; 
-    align-self: center;
+.mobile_list a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: var(--mainTextColor);
+  opacity: 0;
+  transition: opacity 150ms ease-in-out;    
+  font-weight: 900;
+  text-transform: uppercase;
+  
 }
 
-nav a {
-  padding: 1.2rem;
-  color: rgb(255, 255, 255);
+.mobile_nav a:hover :focus {
+  color: white;
 }
 
-nav a.active{ 
-     border-bottom: 2px solid rgb(202, 214, 33);
+.nav_toggle:checked ~ .mobile_list {
+ transform: scale(1, 1);
 }
 
-.socials ul {
-    display: flex;
-    list-style: none;
-    margin-top: 2.5rem;
+.nav_toggle:checked ~ .mobile_list a {
+ opacity: 1;
+ transition: opacity 500ms ease-in-out 100ms;
 }
 
-.socials li {
-  margin: -1rem;
-  padding: 0;
+.nav_toggle:checked ~ .nav-toggle-label {
+  display: none;
 }
 
-.social-icon{
-    width: 3rem;
-    padding: .4rem;
-    border-radius: .9rem;
+.nav_toggle:checked ~ .nav-toggle-close {
+  display: block;
 }
 
-.social-icon--bg {
-  fill: none;
+.nav_toggle {
+ display: none;
 }
 
-.social-icon--logo{ 
-  fill: #C9FBFF;
+.nav-toggle-close {
+  position: absolute;
+  top: 35%;
+  right: 3px;
+  margin-right: 1rem;
+  height: 100%;
+  display: none;
+  cursor: pointer;
+ }
+
+.nav-toggle-label {
+ position: absolute;
+ top: 0;
+ right: 0;
+ margin-right: 1.5rem;
+ height: 100%;
+ display: flex;
+ align-items: center;
 }
 
-.social-icon--logo:hover { 
-  fill: rgb(255, 255, 255);
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after{
+   position: relative;
+   width: 3.5rem;
+   height: .4rem;
+   background-color: var(--mainTextColor);
+   right: 0;
+   cursor: pointer;
+}
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+ content: '';
+ position: absolute;
+ margin: .3rem 0;
 }
 
+.nav-toggle-label span::after{
+   top: .5rem;
+}
+
+.nav-toggle-label span::before{
+   bottom: .5rem;
+}
+
+.list_img{
+  width: 22px;
+  margin-right: 1rem;
+}
+
+
+/* 
+Mobile Social Media Icons 
+*/
+
+.social_mobile{
+  width: 60%;
+  max-width: 400px;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 3rem auto;
+}
+
+.social_mobile{
+  opacity: 0;
+}
+
+.nav_toggle:checked ~ .mobile_list .social_mobile {
+  opacity: 1;
+}
+
+.social_width{
+  width: 35px;
+}
+
+.social_icon{
+  fill: var(--mainTextColor);
+}
+
+.social_icon--bg{
+  fill: var(--hamburgerMenuBg);
+}
+
+
+/* 
+Hamburger Menu End
+*/
 
 
 /* Slider Section */
-
 
 .carousel {
     overflow: hidden;
@@ -564,13 +676,6 @@ footer{
   Media Queries
 ================= */
 
-@media (max-width: 800px) {
-  .dots-container .dot {
-    height: 40px;
-    width: 40px;
-  }
-}
-
 @media (max-width:700px){
   .clients__area {
     display: flex;
@@ -582,4 +687,10 @@ footer{
   }
 
 
+}
+
+@media (min-width:780px) {
+  .mobile_nav{
+    display: none;
+  }
 }
