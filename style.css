@@ -90,6 +90,8 @@ button {
 /* header Section */
 
 
+
+
 /* =============
    Hamburger Menu
 =============== */
@@ -523,10 +525,9 @@ Hamburger Menu End
 
 .image_one{
   width: 200px;
-  left: 57%;
+  left: 45%;
   animation: shake-horizontal 6000ms infinite;
   border: 5px solid rgb(198, 214, 103);
-  
 }
 
 .image_one--para{
