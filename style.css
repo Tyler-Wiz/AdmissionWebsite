@@ -82,24 +82,17 @@ button {
   margin-right: 5rem;
 }
 
+
+
+
 /* =============
      Layout
 =============== */
 
 
-/* header Section */
-
-
-
-
 /* =============
    Hamburger Menu
 =============== */
-
-
-/* 
-Mobile Navigation 
-*/
 
 .mobile_nav {
   text-align: left;
@@ -259,115 +252,72 @@ Mobile Social Media Icons
 }
 
 
-/* 
-Hamburger Menu End
-*/
+
+/* =============
+    featured 
+=============== */
+
+.featured_container{
+  width: 100%;
+  height: 40vh;
+  background: linear-gradient( rgba(0, 0, 0, 0.61), rgba(3, 0, 0, 0.5) ), url('img/slide1.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position:center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 4rem;
+  padding: 5rem;
+  text-transform: capitalize;
+  font-weight: 700;
+}
+
+.featured_container h1{
+  font-size: 1.6rem;
+}
+
+.featured_btn {
+  width: 310px;
+  display: flex;
+  justify-content: space-between;
+  margin: 3rem;
+  text-align: center;
+  cursor: pointer;
+}
+
+.consult_btn{
+  background-color: var(--main);
+  border-radius: 20px;
+  padding: 1rem;
+  width: 150px;
+}
+
+.f_contact{
+  color: var(--main);
+  background-color: white;
+  border: 1px solid var(--main);
+}
 
 
-/* Slider Section */
-
-.carousel {
-    overflow: hidden;
-    width:100%;
-    margin: 0 auto;
-    margin-bottom: 7rem;
-    position: relative;
-    list-style: none;
-    padding: 0;
-  }
-  
-  .carousel .carousel__item,
-  .carousel .carousel__item--hidden {
-    display: none;
-  }
-  
-  .carousel .carousel__item img {
-    width: 100%;
-    height:75vh;
-    object-fit: cover;
-    filter: brightness(40%)
-  }
-  
-  .carousel .carousel__item--visible {
-    display: block;
-    animation: slide-in-right 500ms;
-  }
-  
-  .carousel .carousel__actions {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-
-  .dots-container {
-    position: absolute;
-    bottom: 30%;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  
-  .dots-container .dot {
-    cursor: pointer;
-    padding: 4px;
-    margin: 0 10px;
-    background-color: rgba(248, 248, 248, 0.178);
-    border-radius: 50%;
-    border: 3px solid rgb(255, 255, 255);
-    display: inline-block;
-    transition: background-color 0.6s ease;
-  }
-
-  .dots-container .active,
-  .dots-container .dot:hover {
-    background-color: #000000;
-  }
-  
-
-  .carousel__text{
-    color: white;
-    animation: scale-in-right  2000ms;
-  }
-  
-  .carousel__text-container {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      max-width: 50%;
-      margin-left: 10rem;
-      z-index: 9999;
-  }
-
-  .carousel__button {
-    background: var(--buttons);
-    border: none;
-    margin-top: 3rem;
-    margin-left: 4rem;
-    color: rgb(0, 0, 0);
-    padding: 12px 20px ;
-    border-radius: 6px;
-    cursor: pointer;
-    animation: slide-in-elliptic-right-fwd  2000ms;
-  }
-
-
-
-/* About Us Section */
-
+/* =============
+    About Us 
+=============== */
 
 .aboutus{
   max-width:1200px;
   margin: 0 auto;
-  margin-bottom: 10rem;
+  padding: 3rem;
+  margin-bottom: 5rem;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 1.5rem;
 }
 
 .aboutus__container {
-  height: 300px;
+  height: 250px;
   border-radius: 10px;
   margin: 1rem;
   box-shadow: rgba(145, 145, 145, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
@@ -376,7 +326,7 @@ Hamburger Menu End
 }
 
 .aboutus__container:hover{
-  background-color: var(--buttons);
+  background-color: var(--lightMain);
   color: white;
   cursor: pointer;
   animation: slide-top 1000ms ;
@@ -391,14 +341,14 @@ Hamburger Menu End
 }
 
 .aboutus__img {
-  width: 5rem;
+  width: 3.5rem;
   position: absolute;
   top: 5%;
   left: 10%;
 }
 
 .aboutus__img--mod {
-  fill: rgb(182, 194, 12);
+  fill: var(--main);
 }
 
 .aboutus__info{
