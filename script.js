@@ -1,131 +1,58 @@
-
-let slidePosition = 0;
 let count = 0
-let countTwo = 0
-let countThree = 0
-let scrollValue = window.scrollY;
-const navbar = document.querySelector('.navbar')
-const track = document.querySelector('.carousel')
-// const slides = Array.from(track.children)
-const dotnav = document.querySelector('.dots-container')
-const dots = document.getElementsByClassName('dot');
-// const totalSlides = slides.length;
-const studentHold = document.querySelector('.counterOne')
-const consultHold = document.querySelector('.counterTwo')
-const visaHold = document.querySelector('.counterThree')
-
-
-
+let countVisa = 0
+let countConsult = 200
 const onePara = document.querySelector('.image_one--para')
-const imageOne = document.querySelector('.image_one')
+const images = document.querySelectorAll('#images')
+const para = document.querySelectorAll('.para')
+const [one, two, three, four, five, six] = images
+const [paraOne, paraTwo] = para
 
-function ImageoneIn(){
+
+let admissions = setInterval(() => {
+    const numbers = document.getElementById('achieve_numbers')
+    count++
+    numbers.textContent = count  + "+"
+    if(count === 550){
+    clearInterval(admissions)
+  }
+}, 10);
+
+let visas = setInterval(() => {
+  const visa = document.getElementById('achieve_visa')
+  countVisa++
+  visa.textContent = countVisa  + "+"
+    if(countVisa  === 380){
+  clearInterval(visas)
+  }
+}, 10);
+
+let consults = setInterval(() => {
+  const consult = document.getElementById('achieve_consults')
+  countConsult+=5
+  consult.textContent = countConsult + "+"
+  if(countConsult === 3200){
+  clearInterval(consults)
+  }
+}, 10);
+
+
+one.addEventListener('mouseover', () => {
   onePara.style.display = 'block'
-}
+})
 
-function ImageoneOut(){
+one.addEventListener('mouseout', () => {
   onePara.style.display = 'none'
-}
+})
+
+two.addEventListener('mouseover', () => {
+  paraTwo.style.display = 'block'
+})
+
+two.addEventListener('mouseout', () => {
+  paraTwo.style.display = 'none'
+})
 
 
-imageOne.addEventListener('mouseover', ImageoneIn)
-imageOne.addEventListener('mouseout', ImageoneOut)
 
 
-
-
-// Navbar Style Change // 
-
-// navbar.addEventListener('click', function(nav){
-//   let elems = document.querySelectorAll(".active");
-//   [].forEach.call(elems, function(el) {
-//     el.classList.remove("active");
-//   });
-//  nav.target.className = "active";
-// }) 
-
-
-// function changeNavBg(){
-//   let scrollValue = window.scrollY;
-//   const navbarBg = document.querySelector('#navbarBg')
-//   if(scrollValue < 500){
-//       navbarBg.classList.remove('navbarBg')
-//   } else {
-//     navbarBg.classList.add('navbarBg')
-//   }
-// }
-
-// window.addEventListener('scroll', changeNavBg)
-
-
-// Carousel functions //
-
-
-// const updateSlidePosition = () => {
-//   slides.forEach(slide => {
-//     slide.classList.remove('carousel__item--visible');
-//     slide.classList.add('carousel__item--hidden');
-//   })
-//   let trackSlide =  slides[slidePosition]
-//   trackSlide.classList.add('carousel__item--visible');
-// }
-
-// setInterval(() => {
-//   if (slidePosition === totalSlides - 1) {
-//       slidePosition = 0;
-//     } else {
-//       slidePosition++;
-//     }
-//     updateSlidePosition();
-// }, 5000);
-
-// Array.from(dots).forEach(function(element, index) {
-//   element.setAttribute('data-index', index);
-//   element.setAttribute('aria-label', 'Go to slide #' + (index + 1));
-//   element.addEventListener('click', updateSlideOnDotClick);
-// });
-
-// function updateSlideOnDotClick(){
-//   slidePosition = parseInt(this.getAttribute('data-index'));
-//   updateSlidePosition();
-//   for (i = 0; i < dots.length; i++) {
-//     dots[i].classList.add('active');
-//   }
-// }
-
-// for (i = 0; i < dots.length; i++) {
-//   dots[i].classList.remove('active');
-// }
-
-
-// Functions for Client Numbers // 
-
- 
-// function student(){
-//     count++
-//     studentHold.textContent = count  + "+"
-//     if(count === 550){
-//     clearInterval(studentId)
-//   }
-// }
-
-// function consult(){
-//   countTwo++
-//   consultHold.textContent = countTwo  + "+"
-//   if(countTwo === 1900){
-//     clearInterval(consultId)
-//   }
-// }
-
-// function visa(){
-//   countThree++
-//   visaHold.textContent = countThree + "+"
-//   if(countThree === 380){
-//     clearInterval(visaId)
-//   }
-// }
-
-// let studentId = setInterval(student, 10)
-// let consultId = setInterval(consult, 5)
-// let visaId = setInterval(visa, 10)
 

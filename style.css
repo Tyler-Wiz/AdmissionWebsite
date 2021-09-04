@@ -4,6 +4,7 @@
 
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;1,100;1,400;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700;900&display=swap');
 
 *{
     box-sizing: border-box;
@@ -40,7 +41,7 @@ body {
   margin: 0 auto;
   padding: 0;
   width: 100%;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Poppins', sans-serif;
   letter-spacing: .15rem;
   line-height: 1.8;
 }
@@ -73,11 +74,6 @@ nav a {
   font-size: 3rem;
 }
 
-button {
-  font-weight: 900;
-  font-family: 'Montserrat', sans-serif;
-}
-
 .logo {
   margin-right: 5rem;
 }
@@ -101,6 +97,7 @@ button {
   width: 100%;
   padding: .5rem;
   z-index: 99999;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .mobile_list {
@@ -301,6 +298,51 @@ Mobile Social Media Icons
   border: 1px solid var(--main);
 }
 
+/* =============
+    Achievements 
+=============== */
+
+.achieve_container{
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5rem;
+}
+
+.achieve{
+  width: 30%px;
+  display: flex;
+  padding: 2rem;
+}
+
+.achieve_icon{
+  width: 60px;
+  margin-right: 2rem;
+}
+
+.achieve_icon--chg{
+  fill: var(--main);
+}
+
+.achieve_content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#achieve_numbers{
+   color: var(--linkDark);
+}
+
+#achieve_consults{
+  color: var(--buttons);
+}
+
+#achieve_visa{
+  color: var(--linkslight);
+}
+
 
 /* =============
     About Us 
@@ -314,6 +356,13 @@ Mobile Social Media Icons
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-gap: 1.5rem;
+}
+
+.aboutus_title{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
 }
 
 .aboutus__container {
@@ -367,71 +416,6 @@ Mobile Social Media Icons
   cursor: pointer;
   display: none;
 }
-
-
-
-
-/* clients */
-
-
-.clients {
-  width: 90%;
-  max-width:1200px;
-  margin: 0 auto;
-  margin-bottom: 10rem;
-  line-height: 2;
-}
-
-.clients__featured{
-  position: relative;
-}
-
-.clients__area {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 2rem;
-}
-
-.featured__img {
-    width:95%;
-    height: 600px;
-    object-fit: cover;
-}
-
-.featured__back{
-  width:50%;
-  height: 550px;
-  position: absolute;
-  left: -3%;
-  top: 5%;
-  z-index: -10;
-}
-
-.clients__info span{
-  font-size: 3rem;
-  margin-right: 3rem;
-}
-
-.counter{
-  margin-top: 5rem;
-}
-
-.counter h2{
-  text-transform: capitalize;
-}
-
-.counterOne{
-  color: rgb(211, 224, 22);
-}
-
-.counterTwo{
-  color: rgb(63, 165, 42);
-}
-
-.counterThree{
-  color: rgb(165, 42, 69);
-}
-
 
 
 /* =============== 
@@ -500,8 +484,31 @@ Mobile Social Media Icons
   width: 0;
   height: 0;
   border: 40px solid transparent;
-  border-top: 35px solid #dadada;
+  border-top: 20px solid #dadada;
 }
+
+.image_two--para{
+  position: absolute;
+  width: 300px;
+  background-color:#dadada ;
+  border-radius: 10px;
+  padding: 2rem;
+  top: -2%;
+  display: none;
+  z-index: 10;
+}
+
+.image_two--para:after {
+  content: '';
+  position: absolute;
+  left: 10%;
+  top: 90px;
+  width: 0;
+  height: 0;
+  border: 40px solid transparent;
+  border-top: 20px solid #dadada;
+}
+
 
 
 .image_two{
@@ -665,6 +672,7 @@ footer{
   line-height: 2;
   text-transform: capitalize;
   padding: 3.5rem;
+  font-family: 'Montserrat', sans-serif;
 }
 
 footer h3 {
