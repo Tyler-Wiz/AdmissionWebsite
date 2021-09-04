@@ -417,6 +417,71 @@ Mobile Social Media Icons
   display: none;
 }
 
+/* =============== 
+    Clients
+================ */
+
+.clients{
+  width: 100%;
+  background-color: var(--Breaker);
+  padding: 1.5rem;
+  margin-bottom: 5rem;
+}
+
+.clients_container{
+  position: relative;
+}
+
+.clients_featured{
+  width: 85%;
+  margin: 2rem 4rem;
+  position: relative;
+  z-index: 10;
+}
+
+.clients_bg{
+  height: 50vh;
+  position: absolute;
+  top: 10%;
+  left: 3%;
+}
+
+.clients_text{
+  display: flex;
+  margin: 0 auto;
+  width: 80%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.clients_details{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  margin: 0 auto;
+  background-color: var(--hamburgerMenuBg);
+  border-radius: 5px 20px 5px 20px;
+  padding: 1.5rem;
+  margin-bottom: 3rem;
+  animation: slide-in-bottom 500ms;
+}
+
+.clients_inner{
+  margin-left: 8rem;
+}
+
+.clients_icon{
+  width: 20px;
+}
+
+.clients_icon--chg{
+  fill: var(--main);
+}
+
+
 
 /* =============== 
     Testimonials
@@ -509,8 +574,6 @@ Mobile Social Media Icons
   border-top: 20px solid #dadada;
 }
 
-
-
 .image_two{
   width: 100px;
   top: 15%;
@@ -524,6 +587,7 @@ Mobile Social Media Icons
   left: 35%;
   animation: shake-horizontal 7000ms infinite;
   border: 5px solid rgb(147, 193, 207);
+  display: none;
 }
 
 .image_four{
@@ -550,7 +614,6 @@ Mobile Social Media Icons
   animation: vibrate-1 5000ms infinite;
   border: 5px solid var(--main);
 }
-
 
 
 /* =============== 
@@ -1033,6 +1096,31 @@ hr {
   100% {
     -webkit-transform: translate(0);
             transform: translate(0);
+  }
+}
+
+ @-webkit-keyframes slide-in-bottom {
+  0% {
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-bottom {
+  0% {
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
   }
 }
 
