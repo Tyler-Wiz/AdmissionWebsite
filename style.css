@@ -424,7 +424,7 @@ Mobile Social Media Icons
 .clients{
   width: 100%;
   background-color: var(--Breaker);
-  padding: 1.5rem;
+  padding: 1rem;
   margin-bottom: 5rem;
 }
 
@@ -458,9 +458,8 @@ Mobile Social Media Icons
 
 .clients_details{
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
   background-color: var(--hamburgerMenuBg);
   border-radius: 5px 20px 5px 20px;
@@ -470,11 +469,12 @@ Mobile Social Media Icons
 }
 
 .clients_inner{
-  margin-left: 8rem;
+  margin-left: 4rem;
 }
 
 .clients_icon{
   width: 20px;
+  margin-right: 1rem;
 }
 
 .clients_icon--chg{
