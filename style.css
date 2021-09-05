@@ -35,7 +35,9 @@
 /* =============
     Typography 
 =============== */
-
+html{
+  font-size: 10px;
+}
 
 body {
   margin: 0 auto;
@@ -46,36 +48,36 @@ body {
   line-height: 1.8;
 }
 
-html{
-  font-size: 10px;
+h1, h2, h3, h4, h5, h6{
+  margin: 0;
 }
 
 h1 {
   font-size: 3.5rem;
-  margin: 0;
 }
 
 h2 {
   font-size: 1.8rem;
 }
- 
+
+h3{
+  font-size: 1.3rem;
+}
+
+h4{
+  font-size: 1.1rem;
+}
+
 p {
   font-size: 1rem;
 }
 
-nav a {
-  font-weight: 600;
-  text-transform: uppercase;
-  text-decoration-line: none;
-  font-size: 1.4rem;
+.mobile_list a {
+  font-size: 1.3rem;
 }
 
-.carousel__text{
-  font-size: 3rem;
-}
-
-.logo {
-  margin-right: 5rem;
+.featured_container h1{
+  font-size: 1.6rem;
 }
 
 
@@ -131,7 +133,6 @@ nav a {
 
 .mobile_list a {
   text-decoration: none;
-  font-size: 1.3rem;
   color: var(--mainTextColor);
   opacity: 0;
   transition: opacity 150ms ease-in-out;    
@@ -272,9 +273,6 @@ Mobile Social Media Icons
   font-weight: 700;
 }
 
-.featured_container h1{
-  font-size: 1.6rem;
-}
 
 .featured_btn {
   width: 310px;
@@ -429,11 +427,12 @@ Mobile Social Media Icons
 }
 
 .clients_container{
+  width: 90%;
   position: relative;
 }
 
 .clients_featured{
-  width: 85%;
+  width: 95%;
   margin: 2rem 4rem;
   position: relative;
   z-index: 10;
@@ -442,7 +441,7 @@ Mobile Social Media Icons
 .clients_bg{
   height: 50vh;
   position: absolute;
-  top: 10%;
+  top: 5%;
   left: 3%;
 }
 
@@ -493,7 +492,6 @@ Mobile Social Media Icons
   margin: 0 auto;
   text-transform: capitalize;
   position: relative;
- 
 }
 
 .testimonials__head{
@@ -502,14 +500,14 @@ Mobile Social Media Icons
   justify-content: center;
   align-items: center;
   padding: 2rem;
-  margin-bottom: 10rem;
+  margin-bottom: 5rem;
 }
 
 .testimonial_images{
   width: 90%;
   margin: 0 auto;
   position: relative;
-  min-height: 70vh;
+  min-height: 80vh;
 }
 
 .testimonial_images img{
@@ -524,21 +522,21 @@ Mobile Social Media Icons
 
 .image_one{
   width: 200px;
-  left: 45%;
+  left: 40%;
   animation: shake-horizontal 6000ms infinite;
   border: 5px solid rgb(198, 214, 103);
 }
 
 .image_one--para{
-    position: absolute;
-    width: 300px;
-    background-color:#dadada ;
-    border-radius: 10px;
-    padding: 2rem;
-    top: -17%;
-    left: 35%;
-    display: none;
-    z-index: 10;
+  position: absolute;
+  width: 300px;
+  background-color:#dadada ;
+  border-radius: 10px;
+  padding: 2rem;
+  top: -17%;
+  left: 35%;
+  display: none;
+  z-index: 10;
 }
 
 .image_one--para:after {
@@ -594,7 +592,7 @@ Mobile Social Media Icons
   width: 120px;
   height: 120px;
   top: 40%;
-  left: 70%;
+  left: 60%;
   animation: vibrate-1 7000ms infinite;
   border: 5px solid rgb(219, 119, 177);
 }
@@ -712,7 +710,7 @@ textarea {
   color: var(--main);
 }
 
-.btn{
+.btn {
   width: 100%;
   padding: 1.5rem;
   border-radius: 5px 20px 5px 20px;
