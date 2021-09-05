@@ -23,13 +23,6 @@
     --footer:#000000;
     --footerTextBold:#e2e2e2;
     --footerTextLight:#f2f2f296;
-    --socialbg:#0A2342;
-    --socialbody:#1a1515;
-    --buttons:#cad621;
-    --sectiontwo:#dfdfdf42;
-    --links:#f0f0f0;
-    --linkslight:#227c9d;
-    --gradient-box-w: linear-gradient(145deg, #d1d1d1, #ffffff)
 }
 
 /* =============
@@ -46,7 +39,6 @@ body {
   font-family: 'Poppins', sans-serif;
   letter-spacing: .15rem;
   line-height: 1.8;
-  overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5, h6{
@@ -78,7 +70,9 @@ p {
 }
 
 .featured_container h1{
-  font-size: 1.6rem;
+  font-size: 1.3rem;
+  margin:0 auto;
+  max-width: 300px;
 }
 
 
@@ -87,6 +81,10 @@ p {
 /* =============
      Layout
 =============== */
+
+.main{
+  overflow-x:hidden
+}
 
 
 /* =============
@@ -257,7 +255,6 @@ Mobile Social Media Icons
 =============== */
 
 .featured_container{
-  width: 100%;
   height: 40vh;
   background: linear-gradient( rgba(0, 0, 0, 0.61), rgba(3, 0, 0, 0.5) ), url('img/slide1.jpg');
   background-repeat: no-repeat;
@@ -354,7 +351,6 @@ Mobile Social Media Icons
   margin-bottom: 5rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-gap: 1.5rem;
 }
 
 .aboutus_title{
@@ -422,9 +418,10 @@ Mobile Social Media Icons
 
 .clients{
   width: 100%;
+  margin: 0 auto;
   background-color: var(--Breaker);
-  padding: 1rem;
   margin-bottom: 5rem;
+  padding: 1rem;
 }
 
 .clients_container{
@@ -433,23 +430,22 @@ Mobile Social Media Icons
 }
 
 .clients_featured{
-  width: 95%;
-  margin: 2rem 4rem;
+  width: 90%;
+  margin: 2rem 0 2rem 5rem;
   position: relative;
   z-index: 10;
 }
 
 .clients_bg{
-  height: 50vh;
+  width: 17%;
   position: absolute;
-  top: 5%;
-  left: 3%;
+  top: 10%;
+  left: 7%;
 }
 
 .clients_text{
   display: flex;
   margin: 0 auto;
-  width: 80%;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -489,10 +485,11 @@ Mobile Social Media Icons
 
 
 .testimonials{
-  width: 100%;
+  width:100%;
   margin: 0 auto;
   text-transform: capitalize;
   position: relative;
+  overflow: hidden;
 }
 
 .testimonials__head{
@@ -509,6 +506,7 @@ Mobile Social Media Icons
   margin: 0 auto;
   position: relative;
   min-height: 80vh;
+  padding: 1.5rem;
 }
 
 .testimonial_images img{
