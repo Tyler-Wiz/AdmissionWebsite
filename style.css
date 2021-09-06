@@ -46,11 +46,11 @@ h1, h2, h3, h4, h5, h6{
 }
 
 h1 {
-  font-size: 3.5rem;
+  font-size: clamp(1.3rem, 3vw, 2.5rem);
 }
 
 h2 {
-  font-size: 1.8rem;
+  font-size: clamp(1.2rem, 3vw, 1.8rem);
 }
 
 h3{
@@ -62,18 +62,13 @@ h4{
 }
 
 p {
-  font-size: 1rem;
+  font-size: clamp(0.6rem, 2.5vw, 1.3rem);
 }
 
 .mobile_list a {
   font-size: 1.3rem;
 }
 
-.featured_container h1{
-  font-size: 1.3rem;
-  margin:0 auto;
-  max-width: 300px;
-}
 
 
 
@@ -255,7 +250,7 @@ Mobile Social Media Icons
 =============== */
 
 .featured_container{
-  height: 40vh;
+  min-height: 40vh;
   background: linear-gradient( rgba(0, 0, 0, 0.61), rgba(3, 0, 0, 0.5) ), url('img/slide1.jpg');
   background-repeat: no-repeat;
   background-size: cover;
@@ -300,7 +295,7 @@ Mobile Social Media Icons
 
 .achieve_container{
   width: 90%;
-  margin: 0 auto;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
   margin-bottom: 5rem;
@@ -419,6 +414,8 @@ Mobile Social Media Icons
 .clients{
   width: 100%;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
   background-color: var(--Breaker);
   margin-bottom: 5rem;
   padding: 1rem;
@@ -532,8 +529,8 @@ Mobile Social Media Icons
   background-color:#dadada ;
   border-radius: 10px;
   padding: 2rem;
-  top: -17%;
-  left: 35%;
+  top: -10%;
+  left: 30%;
   display: none;
   z-index: 10;
 }
@@ -549,13 +546,21 @@ Mobile Social Media Icons
   border-top: 20px solid #dadada;
 }
 
+
+.image_two{
+  width: 100px;
+  top: 15%;
+  animation: vibrate-1 3000ms infinite;
+  border: 5px solid rgb(132, 224, 178);
+}
+
 .image_two--para{
   position: absolute;
   width: 300px;
   background-color:#dadada ;
   border-radius: 10px;
   padding: 2rem;
-  top: -2%;
+  top: 2%;
   display: none;
   z-index: 10;
 }
@@ -571,13 +576,6 @@ Mobile Social Media Icons
   border-top: 20px solid #dadada;
 }
 
-.image_two{
-  width: 100px;
-  top: 15%;
-  animation: vibrate-1 3000ms infinite;
-  border: 5px solid rgb(132, 224, 178);
-}
-
 .image_three{
   width: 114px;
   top: 30%;
@@ -585,6 +583,28 @@ Mobile Social Media Icons
   animation: shake-horizontal 7000ms infinite;
   border: 5px solid rgb(147, 193, 207);
   display: none;
+}
+
+.image_three--para{
+  position: absolute;
+  width: 300px;
+  background-color:#dadada ;
+  border-radius: 10px;
+  padding: 2rem;
+  top: 30%;
+  display: none;
+  z-index: 10;
+}
+
+.image_three--para:after {
+  content: '';
+  position: absolute;
+  left: 10%;
+  top: 90px;
+  width: 0;
+  height: 0;
+  border: 40px solid transparent;
+  border-top: 20px solid #dadada;
 }
 
 .image_four{
@@ -596,12 +616,57 @@ Mobile Social Media Icons
   border: 5px solid rgb(219, 119, 177);
 }
 
+.image_four--para{
+  position: absolute;
+  width: 300px;
+  background-color:#dadada ;
+  border-radius: 10px;
+  padding: 2rem;
+  top: 27%;
+  left: 30%;
+  display: none;
+  z-index: 10;
+}
+
+.image_four--para:after {
+  content: '';
+  position: absolute;
+  left: 40%;
+  top: 90px;
+  width: 0;
+  height: 0;
+  border: 40px solid transparent;
+  border-top: 20px solid #dadada;
+}
+
 .image_five{
   width: 120px;
   height: 120px;
   top: 40%;
   animation: shake-horizontal 5000ms infinite;
   border: 5px solid rgb(219, 213, 255);
+}
+
+.image_five--para{
+  position: absolute;
+  width: 300px;
+  background-color:#dadada ;
+  border-radius: 10px;
+  padding: 2rem;
+  top: 27%;
+  display: none;
+  z-index: 10;
+}
+
+.image_five--para:after {
+  content: '';
+  position: absolute;
+  left: 15%;
+  top: 90px;
+  width: 0;
+  height: 0;
+  border: 40px solid transparent;
+  border-top: 20px solid #dadada;
 }
 
 .image_six{
@@ -612,6 +677,28 @@ Mobile Social Media Icons
   border: 5px solid var(--main);
 }
 
+.image_six--para{
+  position: absolute;
+  width: 300px;
+  background-color:#dadada ;
+  border-radius: 10px;
+  padding: 2rem;
+  top: 48%;
+  left: 10%;
+  display: none;
+  z-index: 10;
+}
+
+.image_six--para:after {
+  content: '';
+  position: absolute;
+  left: 48%;
+  top: 90px;
+  width: 0;
+  height: 0;
+  border: 40px solid transparent;
+  border-top: 20px solid #dadada;
+}
 
 /* =============== 
     Contact
@@ -1151,4 +1238,29 @@ hr {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
+
+  .achieve_container{
+    max-width:1200px;
+    margin: 0 auto;
+    flex-direction: row;
+    gap: 15rem;
+    margin-bottom: 3rem;
+  }
+
+  .client_container{
+    display: grid;
+    max-width:1200px;
+    margin: 0 auto;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .clients_inner{
+    margin-left: 10rem;
+  }
+
+  .featured_container{
+    min-height: 80vh;
+    margin-bottom: 1rem;
+  }
+  
 }

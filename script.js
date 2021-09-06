@@ -5,8 +5,9 @@ const onePara = document.querySelector('.image_one--para')
 const images = document.querySelectorAll('#images')
 const para = document.querySelectorAll('.para')
 const [one, two, three, four, five, six] = images
-const [paraOne, paraTwo] = para
+const [paraOne, paraTwo, paraThree, paraFour, paraFive, paraSix] = para
 
+console.log(four)
 
 let admissions = setInterval(() => {
     const numbers = document.getElementById('achieve_numbers')
@@ -52,7 +53,28 @@ two.addEventListener('mouseout', () => {
   paraTwo.style.display = 'none'
 })
 
+four.addEventListener('mouseover', () => {
+  paraFour.style.display = 'block'
+})
 
+four.addEventListener('mouseout', () => {
+  paraFour.style.display = 'none'
+})
 
+five.addEventListener('mouseover', () => {
+  paraFive.style.display = 'block'
+})
+
+five.addEventListener('mouseout', () => {
+  paraFive.style.display = 'none'
+})
+
+six.addEventListener('mouseover', () => {
+  paraSix.style.display = 'block'
+})
+
+six.addEventListener('mouseout', () => {
+  paraSix.style.display = 'none'
+})
 
 
