@@ -1,6 +1,6 @@
 let count = 0
 let countVisa = 0
-let countConsult = 200
+let countConsult = 1000
 const onePara = document.querySelector('.image_one--para')
 const images = document.querySelectorAll('#images')
 const para = document.querySelectorAll('.para')
