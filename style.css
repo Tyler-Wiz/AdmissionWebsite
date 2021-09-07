@@ -504,6 +504,26 @@ Mobile Social Media Icons
   fill: var(--main);
 }
 
+/* =============== 
+    University Slider
+   ================ */
+
+.slider{
+  width: 90%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.slider_img{
+    width: 200px;
+    filter: grayscale(1) opacity(40%);
+    padding: 20px;
+}
+
+.slider_img:hover{
+  filter:grayscale(0);
+  transition: all 1000ms;
+}
 
 
 /* =============== 
