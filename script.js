@@ -87,3 +87,18 @@ $('.slider_items').slick({
   autoplaySpeed:1500,
   infinite:true
 });
+
+window.addEventListener("scroll", (event) => {
+  let scroll = this.scrollY;
+  let desktopNav = document.querySelector('.desktop_nav')
+  if(scroll < 600){
+    desktopNav.classList.remove('desktop_scroll')
+  } else {
+    desktopNav.classList.add('desktop_scroll')
+  }
+   if(scroll > 1500){
+    desktopNav.style.display = 'none'
+   } else {
+    desktopNav.style.display = 'flex'
+   }
+});
