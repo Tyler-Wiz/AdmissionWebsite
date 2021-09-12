@@ -7,12 +7,12 @@ const para = document.querySelectorAll('.para')
 const [
   one, two, three, four, five, six,seven,eight, nine, ten, eleven, twelve, thirteen
   ] = images
-const [
+
+  const [
   paraOne, paraTwo, paraThree, paraFour, paraFive, paraSix,paraSeven,
   paraEight, paraNine, paraTen, paraEleven, paraTwelve, paraThirteen
   ] = para
 
-  console.log(paraThirteen)
 
 let admissions = setInterval(() => {
     const numbers = document.getElementById('achieve_numbers')
@@ -41,6 +41,56 @@ let consults = setInterval(() => {
   }
 }, 10);
 
+window.addEventListener("scroll", (e) => {
+  const scroll = this.scrollY;
+  const desktopNav = document.querySelector('.desktop_nav')
+  const aboutUs = document.querySelectorAll('.aboutus__container')
+  const choiceImg = document.querySelector('.clients_container')
+  const choiceInner = document.querySelectorAll('.clients_inner')
+  
+  if(scroll < 700){
+    desktopNav.classList.remove('desktop_scroll')
+  } else {
+    desktopNav.classList.add('desktop_scroll')
+  }
+
+  for (let about of aboutUs) {
+    if(scroll < 300){
+      about.classList.remove('aboutus_move')
+    } else {
+      about.classList.add('aboutus_move')
+    }
+  }
+
+  if(scroll < 950) {
+    choiceImg.style.display = 'none'
+    choiceImg.classList.remove('img_move')
+  } else {
+    choiceImg.style.display = 'block'
+    choiceImg.classList.add('img_move')
+  }
+
+  for (let inner of choiceInner) {
+    if(scroll < 1100) {
+      inner.style.display = 'none'
+      inner.classList.remove('text_move')
+    } else {
+      inner.style.display = 'flex'
+      inner.classList.add('text_move')
+    }
+  }
+ 
+});
+
+$('.slider_items').slick({
+  slidesToShow:5,
+  slidesToScroll:4,
+  dots:true,
+  arrows:false,
+  autoplay:true,
+  autoplaySpeed:3500,
+  infinite:true
+});
 
 one.addEventListener('mouseover', () => {
   onePara.style.display = 'block'
@@ -149,22 +199,5 @@ thirteen.addEventListener('mouseout', () => {
 
 
 
-$('.slider_items').slick({
-  slidesToShow:5,
-  slidesToScroll:1,
-  dots:true,
-  arrows:false,
-  autoplay:true,
-  autoplaySpeed:1500,
-  infinite:true
-});
 
-window.addEventListener("scroll", (event) => {
-  let scroll = this.scrollY;
-  let desktopNav = document.querySelector('.desktop_nav')
-  if(scroll < 600){
-    desktopNav.classList.remove('desktop_scroll')
-  } else {
-    desktopNav.classList.add('desktop_scroll')
-  }
-});
+
