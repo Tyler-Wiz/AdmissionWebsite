@@ -41,46 +41,6 @@ let consults = setInterval(() => {
   }
 }, 10);
 
-window.addEventListener("scroll", (e) => {
-  const scroll = this.scrollY;
-  const desktopNav = document.querySelector('.desktop_nav')
-  const aboutUs = document.querySelectorAll('.aboutus__container')
-  const choiceImg = document.querySelector('.clients_container')
-  const choiceInner = document.querySelectorAll('.clients_inner')
-  
-  if(scroll < 700){
-    desktopNav.classList.remove('desktop_scroll')
-  } else {
-    desktopNav.classList.add('desktop_scroll')
-  }
-
-  for (let about of aboutUs) {
-    if(scroll < 300){
-      about.classList.remove('aboutus_move')
-    } else {
-      about.classList.add('aboutus_move')
-    }
-  }
-
-  if(scroll < 950) {
-    choiceImg.style.display = 'none'
-    choiceImg.classList.remove('img_move')
-  } else {
-    choiceImg.style.display = 'block'
-    choiceImg.classList.add('img_move')
-  }
-
-  for (let inner of choiceInner) {
-    if(scroll < 1100) {
-      inner.style.display = 'none'
-      inner.classList.remove('text_move')
-    } else {
-      inner.style.display = 'flex'
-      inner.classList.add('text_move')
-    }
-  }
- 
-});
 
 $('.slider_items').slick({
   slidesToShow:5,
@@ -197,7 +157,34 @@ thirteen.addEventListener('mouseout', () => {
   paraThirteen.style.display = 'none'
 })
 
+const scrollElements = document.querySelectorAll('.js-scroll')
+const navElements = document.querySelector('.nav_scroll')
 
+function isVisible(element){
+  const elementDiv = element.getBoundingClientRect()
+  let distanceTop = -10;
+  return elementDiv.top - window.innerHeight < distanceTop ? true : false
+}
+
+
+window.addEventListener('scroll', () => {
+  scrollElements.forEach(el => {
+    if(isVisible(el)){
+      el.classList.add('scrolled')
+    } else {
+      el.classList.remove('scrolled')
+    }
+  })
+})
+
+window.addEventListener('scroll', () => {
+  let scroll = this.scrollY
+  if(scroll < 500){
+    navElements.classList.remove('nav_scrolled')
+  } else {
+    navElements.classList.add('nav_scrolled')
+  }
+})
 
 
 

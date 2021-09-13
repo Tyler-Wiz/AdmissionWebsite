@@ -214,6 +214,7 @@ p {
 }
 
 
+
 /* 
 Mobile Social Media Icons 
 */
@@ -401,11 +402,6 @@ Mobile Social Media Icons
   cursor: pointer;
 }
 
-.aboutus_move{
-	-webkit-animation: slide-in-bottom 800ms;
-  animation: slide-in-bottom 800ms;
-}
-
 .aboutus__container:hover .aboutus__img--mod{
   fill: white
 }
@@ -443,6 +439,36 @@ Mobile Social Media Icons
 }
 
 /* =============== 
+    Js Animations
+================ */
+
+.scrolled.slide-in_bottom {
+	-webkit-animation: slide-in-bottom 1s;
+  animation: slide-in-bottom 1s;
+}
+
+.scrolled.slide-in_left{
+  -webkit-animation:slide-in-blurred-left 1s;
+  animation: slide-in-blurred-left 1s;
+}
+
+.scrolled.slide-in_right{
+  -webkit-animation: slide-in-bck-right 1s;
+          animation: slide-in-bck-right 1s;
+}
+
+.js-scroll{
+  opacity: 0;
+  transition: opacity 500ms;
+}
+
+.js-scroll.scrolled{
+  opacity: 1;
+}
+
+
+
+/* =============== 
     Clients
 ================ */
 
@@ -464,7 +490,8 @@ Mobile Social Media Icons
   width: 100%;
   margin: 0 auto;
   background-color: var(--Breaker);
-  margin-bottom: 10rem;
+  margin-top: 1rem;
+  margin-bottom: 5rem;
   position: relative;
 
 }
@@ -479,13 +506,13 @@ Mobile Social Media Icons
 }
 
 .img_move{
-  -webkit-animation:slide-in-blurred-left 800ms;
-  animation: slide-in-blurred-left 800ms;
+  -webkit-animation:slide-in-blurred-left 1s;
+  animation: slide-in-blurred-left 1s;
 }
 
 .text_move{
-  -webkit-animation: slide-in-bck-right 800ms;
-          animation: slide-in-bck-right 800ms;
+  -webkit-animation: slide-in-bck-right 1000ms;
+          animation: slide-in-bck-right 1000ms;
 }
 
 .clients_featured{
@@ -612,7 +639,6 @@ Mobile Social Media Icons
 .image_one{
   width: 200px;
   left: 40%;
-  animation: shake-horizontal 6000ms infinite;
   border: 5px solid rgb(198, 214, 103);
 }
 
@@ -643,7 +669,6 @@ Mobile Social Media Icons
 .image_two{
   width: 100px;
   top: 15%;
-  animation: vibrate-1 3000ms infinite;
   border: 5px solid rgb(132, 224, 178);
 }
 
@@ -673,7 +698,6 @@ Mobile Social Media Icons
   width: 114px;
   top: 38%;
   left: 35%;
-  animation: shake-horizontal 7000ms infinite;
   border: 5px solid rgb(147, 193, 207);
   display: none;
 }
@@ -706,7 +730,6 @@ Mobile Social Media Icons
   height: 120px;
   top: 40%;
   left: 60%;
-  animation: vibrate-1 7000ms infinite;
   border: 5px solid rgb(219, 119, 177);
 }
 
@@ -737,7 +760,6 @@ Mobile Social Media Icons
   width: 120px;
   height: 120px;
   top: 40%;
-  animation: shake-horizontal 5000ms infinite;
   border: 5px solid rgb(219, 213, 255);
 }
 
@@ -767,7 +789,6 @@ Mobile Social Media Icons
   width: 200px;
   top: 60%;
   left: 25%;
-  animation: vibrate-1 5000ms infinite;
   border: 5px solid var(--main);
 }
 
@@ -798,7 +819,6 @@ Mobile Social Media Icons
   width: 200px;
   top: 60%;
   right:10%;
-  animation: vibrate-1 5000ms infinite;
   border: 5px solid var(--main);
   display: none;
 }
@@ -830,7 +850,6 @@ Mobile Social Media Icons
   width: 114px;
   top: 40%;
   right: 5%;
-  animation: vibrate-1 5000ms infinite;
   border: 5px solid var(--main);
   display: none;
 }
@@ -863,7 +882,6 @@ Mobile Social Media Icons
   height: 200px;
   top: 0;
   right: 0;
-  animation: vibrate-1 5000ms infinite;
   border: 5px solid var(--main);
   display: none;
 }
@@ -895,7 +913,6 @@ Mobile Social Media Icons
   width: 100px;
   top: 8%;
   right: 25%;
-  animation: vibrate-1 5000ms infinite;
   border: 5px solid var(--main);
   display: none;
 }
@@ -927,7 +944,6 @@ Mobile Social Media Icons
   width: 100px;
   top: 8%;
   left: 25%;
-  animation: vibrate-1 5000ms infinite;
   border: 5px solid var(--main);
   display: none;
 }
@@ -959,7 +975,6 @@ Mobile Social Media Icons
   width: 114px;
   bottom: 20%;
   left: 0%;
-  animation: vibrate-1 5000ms infinite;
   border: 5px solid var(--main);
   display: none;
 }
@@ -992,7 +1007,6 @@ Mobile Social Media Icons
   width: 100px;
   bottom: 20%;
   right: 38%;
-  animation: vibrate-1 5000ms infinite;
   border: 5px solid var(--main);
   display: none;
 }
@@ -1019,6 +1033,17 @@ Mobile Social Media Icons
   border: 40px solid transparent;
   border-top: 20px solid #dadada;
 }
+
+.test_scroll_one {
+    -webkit-animation: vibrate-1 1s infinite;
+    animation: vibrate-1 2s infinite;
+}
+
+.test_scroll_two {
+   -webkit-animation: shake-horizontal  3s infinite;
+    animation: shake-horizontal  4s infinite;
+}
+
 
 /* =============== 
     Contact
@@ -1513,7 +1538,7 @@ hr {
      border-bottom: 2px solid var(--main);
   }
 
-  .desktop_scroll{
+  .nav_scrolled{
     background-color: rgba(0, 0, 0, 0.712);
     transition: all 1000ms;
     padding: 0 5rem 0 3rem;
