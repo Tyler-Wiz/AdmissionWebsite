@@ -15,7 +15,17 @@ const [
   ] = para
 
 const scrollElements = document.querySelectorAll('.js-scroll')
-const navElements = document.querySelector('.nav_scroll')
+const navLinks = document.querySelectorAll('#nav_link')
+
+
+for(let link of navLinks) {
+   link.addEventListener('click', () => {
+      navLinks.forEach(links => links.classList.remove('active'))
+      link.classList.add('active')
+   }) 
+}
+
+
   
 function isVisible(element){
   const elementDiv = element.getBoundingClientRect()
@@ -109,7 +119,3 @@ twelve.addEventListener('mouseout', () => paraTwelve.style.display = 'none')
 
 thirteen.addEventListener('mouseover', () => paraThirteen.style.display = 'block')
 thirteen.addEventListener('mouseout', () => paraThirteen.style.display = 'none')
-
-
-
-

@@ -79,8 +79,39 @@ p {
      Layout
 =============== */
 
-.desktop_nav{
+
+/* =============
+    Desktop Nav
+=============== */
+
+.desktop_nav {
   display: none;
+  width: 100%;
+  position: absolute;
+  padding: 1rem 5rem 0 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 99999;
+}
+
+.desktop_list{
+  display: flex;
+  gap: 2rem;
+  list-style-type: none;
+}
+
+.desktop_list a{
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+.active {
+  padding: 1.2rem;
+  color: #000000;
+  background-color: var(--main);
 }
 
 /* =============
@@ -1441,6 +1472,12 @@ hr {
 /* ==============
   Media Queries
 ================= */
+@media (max-width:780px){
+  .desktop_nav{
+   display: none;
+  }
+}
+
 
 @media (min-width:780px) {
   .mobile_nav{
@@ -1505,41 +1542,6 @@ hr {
 
   .achieve_bg_design {
    display: none;
-  }
-
-  .desktop_nav {
-    width: 100%;
-    position: absolute;
-    padding: 1rem 5rem 0 3rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 99999;
-  }
-
-  .desktop_list{
-    display: flex;
-    gap: 2rem;
-    list-style-type: none;
-  }
-  
-  .desktop_list a{
-    color: white;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 1.25rem;
-    font-weight: 600;
-  }
-
-  .desktop_list a:hover{
-     padding-bottom: 1rem;
-     border-bottom: 2px solid var(--main);
-  }
-
-  .nav_scrolled{
-    background-color: rgba(0, 0, 0, 0.712);
-    transition: all 1000ms;
-    padding: 0 5rem 0 3rem;
   }
 
   .image_three,
