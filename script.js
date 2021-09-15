@@ -5,7 +5,8 @@ const onePara = document.querySelector('.image_one--para')
 const images = document.querySelectorAll('#images')
 const para = document.querySelectorAll('.para')
 const [
-  one, two, three, four, five, six,seven,eight, nine, ten, eleven, twelve, thirteen
+  one, two, three, four, five, six,seven,eight, 
+  nine, ten, eleven, twelve, thirteen
   ] = images
 
   const [
@@ -13,6 +14,24 @@ const [
   paraEight, paraNine, paraTen, paraEleven, paraTwelve, paraThirteen
   ] = para
 
+const scrollElements = document.querySelectorAll('.js-scroll')
+const navElements = document.querySelector('.nav_scroll')
+  
+function isVisible(element){
+  const elementDiv = element.getBoundingClientRect()
+  let distanceTop = -50;
+  return elementDiv.top - window.innerHeight < distanceTop ? true : false
+}
+
+window.addEventListener('scroll', () => {
+  scrollElements.forEach(el => {
+    if(isVisible(el)){
+      el.classList.add('scrolled')
+    } else {
+      el.classList.remove('scrolled')
+    }
+  })
+})
 
 let admissions = setInterval(() => {
     const numbers = document.getElementById('achieve_numbers')
@@ -52,139 +71,45 @@ $('.slider_items').slick({
   infinite:true
 });
 
-one.addEventListener('mouseover', () => {
-  onePara.style.display = 'block'
-})
+one.addEventListener('mouseover', () => onePara.style.display = 'block')
+one.addEventListener('mouseout', () => onePara.style.display = 'none')
 
-one.addEventListener('mouseout', () => {
-  onePara.style.display = 'none'
-})
+two.addEventListener('mouseover', () => paraTwo.style.display = 'block')
+two.addEventListener('mouseout', () => paraTwo.style.display = 'none')
 
-two.addEventListener('mouseover', () => {
-  paraTwo.style.display = 'block'
-})
+three.addEventListener('mouseover', () => paraThree.style.display = 'block')
+three.addEventListener('mouseout', () => paraThree.style.display = 'none')
 
-two.addEventListener('mouseout', () => {
-  paraTwo.style.display = 'none'
-})
+four.addEventListener('mouseover', () => paraFour.style.display = 'block')
+four.addEventListener('mouseout', () => paraFour.style.display = 'none')
 
-three.addEventListener('mouseover', () => {
-  paraThree.style.display = 'block'
-})
+five.addEventListener('mouseover', () => paraFive.style.display = 'block')
+five.addEventListener('mouseout', () => paraFive.style.display = 'none')
 
-three.addEventListener('mouseout', () => {
-  paraThree.style.display = 'none'
-})
+six.addEventListener('mouseover', () => paraSix.style.display = 'block')
+six.addEventListener('mouseout', () => paraSix.style.display = 'none')
 
+seven.addEventListener('mouseover', () => paraSeven.style.display = 'block')
+seven.addEventListener('mouseout', () => paraSeven.style.display = 'none')
 
-four.addEventListener('mouseover', () => {
-  paraFour.style.display = 'block'
-})
+eight.addEventListener('mouseover', () => paraEight.style.display = 'block')
+eight.addEventListener('mouseout', () => paraEight.style.display = 'none')
 
-four.addEventListener('mouseout', () => {
-  paraFour.style.display = 'none'
-})
+nine.addEventListener('mouseover', () => paraNine.style.display = 'block')
+nine.addEventListener('mouseout', () => paraNine.style.display = 'none')
 
-five.addEventListener('mouseover', () => {
-  paraFive.style.display = 'block'
-})
+ten.addEventListener('mouseover', () => paraTen.style.display = 'block')
+ten.addEventListener('mouseout', () => paraTen.style.display = 'none')
 
-five.addEventListener('mouseout', () => {
-  paraFive.style.display = 'none'
-})
+eleven.addEventListener('mouseover', () => paraEleven.style.display = 'block')
+eleven.addEventListener('mouseout', () => paraEleven.style.display = 'none')
 
-six.addEventListener('mouseover', () => {
-  paraSix.style.display = 'block'
-})
+twelve.addEventListener('mouseover', () => paraTwelve.style.display = 'block')
+twelve.addEventListener('mouseout', () => paraTwelve.style.display = 'none')
 
-six.addEventListener('mouseout', () => {
-  paraSix.style.display = 'none'
-})
+thirteen.addEventListener('mouseover', () => paraThirteen.style.display = 'block')
+thirteen.addEventListener('mouseout', () => paraThirteen.style.display = 'none')
 
-seven.addEventListener('mouseover', () => {
-  paraSeven.style.display = 'block'
-})
-
-seven.addEventListener('mouseout', () => {
-  paraSeven.style.display = 'none'
-})
-
-eight.addEventListener('mouseover', () => {
-  paraEight.style.display = 'block'
-})
-
-eight.addEventListener('mouseout', () => {
-  paraEight.style.display = 'none'
-})
-
-nine.addEventListener('mouseover', () => {
-  paraNine.style.display = 'block'
-})
-
-nine.addEventListener('mouseout', () => {
-  paraNine.style.display = 'none'
-})
-
-ten.addEventListener('mouseover', () => {
-  paraTen.style.display = 'block'
-})
-
-ten.addEventListener('mouseout', () => {
-  paraTen.style.display = 'none'
-})
-
-eleven.addEventListener('mouseover', () => {
-  paraEleven.style.display = 'block'
-})
-
-eleven.addEventListener('mouseout', () => {
-  paraEleven.style.display = 'none'
-})
-
-twelve.addEventListener('mouseover', () => {
-  paraTwelve.style.display = 'block'
-})
-
-twelve.addEventListener('mouseout', () => {
-  paraTwelve.style.display = 'none'
-})
-
-thirteen.addEventListener('mouseover', () => {
-  paraThirteen.style.display = 'block'
-})
-
-thirteen.addEventListener('mouseout', () => {
-  paraThirteen.style.display = 'none'
-})
-
-const scrollElements = document.querySelectorAll('.js-scroll')
-const navElements = document.querySelector('.nav_scroll')
-
-function isVisible(element){
-  const elementDiv = element.getBoundingClientRect()
-  let distanceTop = -10;
-  return elementDiv.top - window.innerHeight < distanceTop ? true : false
-}
-
-
-window.addEventListener('scroll', () => {
-  scrollElements.forEach(el => {
-    if(isVisible(el)){
-      el.classList.add('scrolled')
-    } else {
-      el.classList.remove('scrolled')
-    }
-  })
-})
-
-window.addEventListener('scroll', () => {
-  let scroll = this.scrollY
-  if(scroll < 500){
-    navElements.classList.remove('nav_scrolled')
-  } else {
-    navElements.classList.add('nav_scrolled')
-  }
-})
 
 
 

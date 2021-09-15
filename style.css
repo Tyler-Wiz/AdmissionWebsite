@@ -28,6 +28,7 @@
 /* =============
     Typography 
 =============== */
+
 html{
   font-size: 10px;
 }
@@ -72,9 +73,6 @@ p {
 .mobile_list a {
   font-size: 1.3rem;
 }
-
-
-
 
 
 /* =============
@@ -571,7 +569,7 @@ Mobile Social Media Icons
 .slider{
   max-width: 1400px;
   margin-bottom: 10rem;
-  padding: 2rem;
+  padding: 1.8rem;
   margin: 0 auto;
 }
 
@@ -584,7 +582,7 @@ Mobile Social Media Icons
 }
 
 .slider_img {
-    filter: grayscale(1) opacity(40%);
+    filter: grayscale(1) opacity(.3);
     width:clamp(10rem, 12vw, 50rem);
     margin-bottom: 1rem;
     padding: 2rem;
@@ -1511,8 +1509,8 @@ hr {
 
   .desktop_nav {
     width: 100%;
-    position: fixed;
-    padding: 2rem 5rem 0 3rem;
+    position: absolute;
+    padding: 1rem 5rem 0 3rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
