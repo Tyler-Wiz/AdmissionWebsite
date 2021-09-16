@@ -410,10 +410,15 @@ Mobile Social Media Icons
    flex-direction: column;
    justify-content: center;
    align-items: center;
+   
 }
 
-.aboutus_info_spacing {
-  margin-bottom: 2rem;
+.aboutus_title::after{
+  content: "";
+  width: 15rem;
+  height: .1rem;
+  background-color: var(--main);
+  margin-top: 1rem;
 }
 
 .aboutus__container {
@@ -441,6 +446,7 @@ Mobile Social Media Icons
 
 .aboutus__img {
   width: 3.5rem;
+ 
   position: absolute;
   top: 5%;
   left: 10%;
@@ -458,10 +464,15 @@ Mobile Social Media Icons
   left: 10%;
 }
 
+.aboutus_info_spacing {
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+}
+
 .aboutus__arrow {
-  width: 30px;
+  width: 20px;
   position: absolute;
-  top: 80%;
+  top: 87%;
   left: 10%;
   cursor: pointer;
   display: none;
@@ -629,7 +640,6 @@ Mobile Social Media Icons
     Testimonials
 ================ */
 
-
 .testimonials{
   width:100%;
   margin: 0 auto;
@@ -645,6 +655,14 @@ Mobile Social Media Icons
   align-items: center;
   padding: 2rem;
   margin-bottom: 5rem;
+}
+
+.testimonials__head::after{
+  content: "";
+  width: 15rem;
+  height: .1rem;
+  background-color: var(--main);
+  margin-top: 1rem;
 }
 
 .testimonial_images{
@@ -1218,7 +1236,7 @@ footer {
   font-size: 1.3rem;
   line-height: 2;
   text-transform: capitalize;
-  padding: 3.5rem;
+  padding: 2rem;
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -1231,18 +1249,23 @@ footer h3 {
   display: flex;
   flex-direction: column;
   gap: 3rem;
-  margin-bottom: 7.5rem;
-}
-
-hr {
-  height: .1rem;
-  margin-bottom: .5rem;
-  color: var(--footerTextLight);
+  margin-bottom: 4.5rem;
 }
 
 .footer_copyright {
    display: flex;
    justify-content: center;
+   position: relative;
+}
+
+.footer_copyright::before{
+  content: "";
+  position: absolute;
+  bottom: 20px;
+  width: 90%;
+  height: .1rem;
+  background-color: var(--main);
+  margin-bottom: .5rem;
 }
 
 .footer_contact--edit,
@@ -1475,7 +1498,8 @@ hr {
 @media (max-width:780px){
   .desktop_nav{
    display: none;
-  }
+  } 
+ 
 }
 
 

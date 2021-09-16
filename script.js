@@ -1,5 +1,5 @@
-let count = 0
-let countVisa = 0
+let count = 50
+let countVisa = 30
 let countConsult = 1000
 const onePara = document.querySelector('.image_one--para')
 const images = document.querySelectorAll('#images')
@@ -25,8 +25,6 @@ for(let link of navLinks) {
    }) 
 }
 
-
-  
 function isVisible(element){
   const elementDiv = element.getBoundingClientRect()
   let distanceTop = -50;
@@ -43,32 +41,33 @@ window.addEventListener('scroll', () => {
   })
 })
 
+
 let admissions = setInterval(() => {
-    const numbers = document.getElementById('achieve_numbers')
-    count++
-    numbers.textContent = count  + "+"
-    if(count === 550){
-    clearInterval(admissions)
-  }
-}, 10);
+  const numbers = document.getElementById('achieve_numbers')
+  numbers.textContent = count  + "+"
+    if (count < 550 ) {
+      count++
+     }
+  }, 20);
 
 let visas = setInterval(() => {
   const visa = document.getElementById('achieve_visa')
-  countVisa++
   visa.textContent = countVisa  + "+"
-    if(countVisa  === 380){
-  clearInterval(visas)
-  }
-}, 10);
+    if(countVisa  < 380){
+      countVisa++
+    }
+  }, 20);
 
-let consults = setInterval(() => {
-  const consult = document.getElementById('achieve_consults')
-  countConsult+=5
-  consult.textContent = countConsult + "+"
-  if(countConsult === 3200){
-  clearInterval(consults)
-  }
-}, 10);
+
+  let consults = setInterval(() => {
+    const consult = document.getElementById('achieve_consults')
+    consult.textContent = countConsult + "+"
+    if(countConsult < 3200){
+      countConsult+=5
+     }
+  }, 20);
+
+
 
 
 $('.slider_items').slick({
