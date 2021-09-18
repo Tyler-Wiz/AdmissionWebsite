@@ -23,6 +23,11 @@
     --footer:#000000;
     --footerTextBold:#e2e2e2;
     --footerTextLight:#f2f2f296;
+    --TestimonialOne: #e4e4e4;
+    --TestimonialTwo: #1df3cf80;
+    --TestimonialThree: #6c90f394;
+    --TestimonialFour: #f8d26a;
+    --TestimonialFive:#eec1a2;
 }
 
 /* =============
@@ -479,7 +484,7 @@ Mobile Social Media Icons
 }
 
 /* =============== 
-    Js Animations
+    Animations
 ================ */
 
 .scrolled.slide-in_bottom {
@@ -504,6 +509,21 @@ Mobile Social Media Icons
 
 .js-scroll.scrolled{
   opacity: 1;
+}
+
+.vibrating {
+  -webkit-animation: vibrate-1 3.5s infinite;
+          animation: vibrate-1 3.5s infinite;
+}
+
+.shaking_right{
+  -webkit-animation: shake-horizontal 12s infinite;
+          animation: shake-horizontal 12s infinite;
+}
+
+.shaking_top{
+  -webkit-animation: shake-top 12s infinite;
+          animation: shake-top 12s infinite;
 }
 
 
@@ -609,9 +629,9 @@ Mobile Social Media Icons
    ================ */
 
 .slider{
+  width: 85%;
   max-width: 1400px;
   margin-bottom: 10rem;
-  padding: 1.8rem;
   margin: 0 auto;
 }
 
@@ -680,13 +700,13 @@ Mobile Social Media Icons
 .test_img{
   position: absolute;
   cursor: pointer;
-}
-
+}  
 
 .image_one{
   width: 200px;
+  height: 198px;
   left: 40%;
-  border: 5px solid rgb(198, 214, 103);
+  background-color: var(--TestimonialOne);
 }
 
 .image_one--para{
@@ -716,7 +736,7 @@ Mobile Social Media Icons
 .image_two{
   width: 100px;
   top: 15%;
-  border: 5px solid rgb(132, 224, 178);
+  background-color: var(--TestimonialTwo);
 }
 
 .image_two--para{
@@ -743,9 +763,10 @@ Mobile Social Media Icons
 
 .image_three{
   width: 114px;
+  height: 111px;
   top: 38%;
   left: 35%;
-  border: 5px solid rgb(147, 193, 207);
+  background-color: var(--TestimonialThree);
   display: none;
 }
 
@@ -777,7 +798,7 @@ Mobile Social Media Icons
   height: 120px;
   top: 40%;
   left: 60%;
-  border: 5px solid rgb(219, 119, 177);
+  background-color: var(--TestimonialFour);
 }
 
 .image_four--para{
@@ -807,7 +828,8 @@ Mobile Social Media Icons
   width: 120px;
   height: 120px;
   top: 40%;
-  border: 5px solid rgb(219, 213, 255);
+  left: 10%;
+  background-color: var(--TestimonialOne);
 }
 
 .image_five--para{
@@ -817,6 +839,7 @@ Mobile Social Media Icons
   border-radius: 10px;
   padding: 2rem;
   top: 27%;
+  left: 10%;
   display: none;
   z-index: 10;
 }
@@ -836,7 +859,7 @@ Mobile Social Media Icons
   width: 200px;
   top: 60%;
   left: 25%;
-  border: 5px solid var(--main);
+  background-color: var(--TestimonialFive);
 }
 
 .image_six--para{
@@ -863,10 +886,11 @@ Mobile Social Media Icons
 }
 
 .image_seven{
-  width: 200px;
+  width: 150px;
+  height:153px;
   top: 60%;
   right:10%;
-  border: 5px solid var(--main);
+  background-color: var(--TestimonialThree);
   display: none;
 }
 
@@ -897,7 +921,7 @@ Mobile Social Media Icons
   width: 114px;
   top: 40%;
   right: 5%;
-  border: 5px solid var(--main);
+  background-color: var(--TestimonialTwo);
   display: none;
 }
 
@@ -929,7 +953,7 @@ Mobile Social Media Icons
   height: 200px;
   top: 0;
   right: 0;
-  border: 5px solid var(--main);
+  background-color: var(--TestimonialFive);
   display: none;
 }
 
@@ -960,7 +984,7 @@ Mobile Social Media Icons
   width: 100px;
   top: 8%;
   right: 25%;
-  border: 5px solid var(--main);
+  background-color: var(--TestimonialThree);
   display: none;
 }
 
@@ -991,7 +1015,7 @@ Mobile Social Media Icons
   width: 100px;
   top: 8%;
   left: 25%;
-  border: 5px solid var(--main);
+  background-color: var(--TestimonialFour);
   display: none;
 }
 
@@ -1022,7 +1046,7 @@ Mobile Social Media Icons
   width: 114px;
   bottom: 20%;
   left: 0%;
-  border: 5px solid var(--main);
+  background-color: var(--TestimonialTwo);
   display: none;
 }
 
@@ -1051,10 +1075,11 @@ Mobile Social Media Icons
 
 
 .image_thirteen{
-  width: 100px;
+  width: 130px;
+  height: 125px;
   bottom: 20%;
-  right: 38%;
-  border: 5px solid var(--main);
+  right: 33%;
+  background-color: var(--TestimonialOne);
   display: none;
 }
 
@@ -1490,6 +1515,74 @@ footer h3 {
   }
 }
 
+ @-webkit-keyframes shake-top {
+  0%,
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    -webkit-transform-origin: 50% 0;
+            transform-origin: 50% 0;
+  }
+  10% {
+    -webkit-transform: rotate(2deg);
+            transform: rotate(2deg);
+  }
+  20%,
+  40%,
+  60% {
+    -webkit-transform: rotate(-4deg);
+            transform: rotate(-4deg);
+  }
+  30%,
+  50%,
+  70% {
+    -webkit-transform: rotate(4deg);
+            transform: rotate(4deg);
+  }
+  80% {
+    -webkit-transform: rotate(-2deg);
+            transform: rotate(-2deg);
+  }
+  90% {
+    -webkit-transform: rotate(2deg);
+            transform: rotate(2deg);
+  }
+}
+@keyframes shake-top {
+  0%,
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    -webkit-transform-origin: 50% 0;
+            transform-origin: 50% 0;
+  }
+  10% {
+    -webkit-transform: rotate(2deg);
+            transform: rotate(2deg);
+  }
+  20%,
+  40%,
+  60% {
+    -webkit-transform: rotate(-4deg);
+            transform: rotate(-4deg);
+  }
+  30%,
+  50%,
+  70% {
+    -webkit-transform: rotate(4deg);
+            transform: rotate(4deg);
+  }
+  80% {
+    -webkit-transform: rotate(-2deg);
+            transform: rotate(-2deg);
+  }
+  90% {
+    -webkit-transform: rotate(2deg);
+            transform: rotate(2deg);
+  }
+}
+
+
 
 
 /* ==============
@@ -1499,6 +1592,13 @@ footer h3 {
   .desktop_nav{
    display: none;
   } 
+
+  .js-scroll.scrolled{
+    -webkit-animation: none !important;
+            animation: none !important;
+    opacity: 1;
+  }
+  
  
 }
 
@@ -1568,6 +1668,15 @@ footer h3 {
    display: none;
   }
 
+
+  .image_seven,
+  .image_nine {
+    display: block;
+  }
+
+}
+
+@media (min-width:1100px) {
   .image_three,
   .image_seven,
   .image_eight,

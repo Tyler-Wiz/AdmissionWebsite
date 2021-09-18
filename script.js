@@ -68,8 +68,6 @@ let visas = setInterval(() => {
   }, 20);
 
 
-
-
 $('.slider_items').slick({
   slidesToShow:5,
   slidesToScroll:4,
